@@ -1,173 +1,113 @@
-# Levantamento de Dados e Análise de Requisitos
+# Sistema de Controle de Estoque e Vendas de Óculos
+
+Este sistema tem como objetivo gerenciar o estoque e as vendas de óculos em uma loja, permitindo o cadastro de produtos e funcionários, o registro de vendas e a geração de relatórios gerenciais.
 
 ## 1. Objetivo Principal
-O objetivo principal do sistema é o controle de estoque e venda de óculos, proporcionando uma gestão eficiente do inventário e a emissão de relatórios detalhados sobre as vendas. O sistema deve permitir que os funcionários (vendedores e administradores) interajam com a plataforma de forma intuitiva, facilitando o processo de compra, cadastro de produtos e controle financeiro.
+O objetivo principal do sistema é o controle de estoque e vendas de óculos, identificando as funcionalidades essenciais e os dados que serão gerados, armazenados e processados. O sistema deve permitir o cadastro eficiente de produtos e funcionários, o registro detalhado de transações de vendas, e a geração de relatórios sobre o desempenho de vendas, status de estoque e as finanças da loja, facilitando a tomada de decisões estratégicas.
 
 ## 2. Objetivos Específicos
 
-- **2.1 Cadastro de Funcionários**: O sistema permitirá o cadastro de diferentes tipos de funcionários, com diferentes permissões baseadas no perfil de cada funcionário (ex: vendedores, administradores, etc.).
-
-- **2.2 Cadastro de Produtos**: Serão cadastrados os produtos (óculos) disponíveis para venda, com informações detalhadas sobre cada item (marca, modelo, cor, preço, estoque, etc.).
-
-- **2.3 Registro de Vendas**: O sistema irá registrar todas as transações de venda realizadas, incluindo o produto vendido, quantidade, valor, data e dados do cliente (quando aplicável).
-
-- **2.4 Emissão de Relatórios**: O sistema gerará relatórios gerenciais sobre as vendas realizadas, produtos em estoque, produtos vendidos, etc.
+- **2.1 Cadastro de Funcionários**: O sistema permitirá o cadastro de funcionários, com diferentes permissões e dados como nome, CPF, função e status. Isso gerará informações sobre o quadro de funcionários e suas permissões no sistema.
+  
+- **2.2 Cadastro de Produtos**: O sistema permitirá cadastrar produtos (óculos), gerando dados como nome, marca, preço e quantidade em estoque.
+  
+- **2.3 Registro de Vendas**: O sistema registrará as transações de vendas, criando registros de vendas realizadas com dados sobre o vendedor, cliente (se aplicável), produto, quantidade e valores.
+  
+- **2.4 Emissão de Relatórios**: O sistema gerará relatórios como vendas totais, vendas por produto, vendas por funcionário e status do estoque (produtos em baixa, por exemplo).
 
 ## 3. Dados Mantidos no Sistema
 
 ### 3.1 Cadastro de Funcionários
 Os dados mantidos para o cadastro de funcionários incluem:
 
-- ID do funcionário (chave primária)
-- Nome completo
-- CPF ou CNPJ
-- Login
-- Senha (criptografada)
-- Função do funcionário
-- Telefone (opcional)
-- Data de registro
-- Status (ativo/inativo)
+- **ID do Funcionário** (chave primária)
+- **Nome completo**
+- **CPF**
+- **Login**
+- **Senha**
+- **Função do funcionário**
+- **Telefone**
+- **Data de registro**
+- **Status** (ativo/inativo)
 
 ### 3.2 Cadastro de Produtos
 Os dados mantidos para o cadastro de produtos incluem:
 
-- ID do Produto (chave primária)
-- Marca
-- Modelo/Nome do produto
-- Cor
-- Material
-- Preço
-- Quantidade em estoque
-- Categoria (ex: óculos de sol, óculos de grau)
-- Imagem do produto (opcional)
+- **ID do Produto** (chave primária)
+- **Marca**
+- **Modelo/Nome do produto**
+- **Cor**
+- **Material**
+- **Preço**
+- **Quantidade em estoque**
+- **Categoria** (ex: óculos de sol, óculos de grau)
+- **Imagem do produto**
 
 ### 3.3 Registro de Vendas
 Os dados registrados para cada venda incluem:
 
-- ID da venda (chave primária)
-- Data da venda
-- ID do vendedor (funcionário que registrou a venda)
-- ID do produto (produtos vendidos)
-- Quantidades
-- Valor total
-- Forma de pagamento (cartão de crédito, débito, dinheiro)
-- Status da venda (concluída, pendente, cancelada)
-- Descontos aplicados (se houver)
+- **ID da venda** (chave primária)
+- **Data da venda**
+- **ID do vendedor** (funcionário que registrou a venda)
+- **ID do produto** (produtos vendidos)
+- **Quantidade** (de produtos vendidos)
+- **Valor total**
+- **Forma de pagamento** (cartão de crédito, débito, dinheiro)
+- **Status da venda** (concluída, pendente, cancelada)
+- **Descontos aplicados** (se houver)
 
 ## 4. Fluxo de Trabalho
-O cliente poderá escolher os óculos na loja e, ao finalizar a compra, o sistema registrará todos os dados da venda, incluindo o funcionário responsável, o produto vendido e o total da compra. O processo de gerenciamento de estoque será feito pelos administradores e vendedores.
+O fluxo de trabalho descreve o processo de venda dentro da loja:
+
+1. O cliente escolhe os óculos desejados na loja.
+2. O funcionário realiza a venda, registrando os dados no sistema.
+3. O sistema registra os dados da venda, incluindo o **vendedor**, o **produto vendido**, a **quantidade**, o **valor total** e a **forma de pagamento**.
+4. O sistema atualiza automaticamente o **estoque** e gera relatórios financeiros (se solicitado).
 
 ## 5. Funcionamento do Sistema
 
 ### 5.1 Acesso ao Sistema
-O sistema será acessado por login e senha. O acesso será dividido por perfil:
+O acesso ao sistema será feito por **login e senha**, com diferentes níveis de permissão, de acordo com o perfil do usuário:
 
 - **Administrador**: Acesso total a todas as funcionalidades do sistema.
-- **Vendedor**: Acesso ao módulo de vendas, sem permissões para editar produtos ou visualizar relatórios financeiros.
+- **Vendedor**: Acesso ao módulo de vendas, sem permissão para editar produtos ou visualizar relatórios financeiros.
 - **Estoquista**: Acesso ao módulo de gerenciamento de estoque, sem acesso ao módulo de vendas ou relatórios financeiros.
-- **Financeiro**: Acesso a relatórios financeiros e controle de fluxo de caixa, mas sem acesso ao gerenciamento de produtos ou funcionários.
+- **Financeiro**: Acesso aos relatórios financeiros e controle de fluxo de caixa, sem acesso ao gerenciamento de produtos ou funcionários.
 
 ### 5.2 Módulo de Funcionários
-O módulo de funcionários permitirá o cadastro de novos funcionários e o gerenciamento dos dados dos mesmos (alterações e status), além da possibilidade de alterar permissões de acesso.
+- Cadastro de novos **funcionários**.
+- Gerenciamento de dados dos **funcionários** (alterações de informações, status, etc.).
+- Alteração das **permissões de acesso** conforme o perfil do usuário (vendedor, administrador, etc.).
 
 ### 5.3 Módulo de Produtos
-O módulo de produtos permitirá o cadastro e a gestão dos óculos disponíveis para venda, com informações detalhadas sobre cada item, como preço, descrição e quantidade em estoque.
+- Cadastro e **gestão de produtos** (óculos) disponíveis para venda.
+- Informações detalhadas sobre cada item, como **preço**, **quantidade em estoque**, **marca** e **categoria**.
+- Atualização do **estoque** à medida que as vendas são realizadas.
 
 ### 5.4 Módulo de Vendas
-O módulo de vendas registrará todas as transações realizadas, com dados do produto, vendedor, quantidade e valor.
+- Registro de todas as **transações de venda** realizadas.
+- Geração de dados detalhados sobre a venda, incluindo **produto(s)** vendido(s), **quantidade**, **valor total** e **vendedor** responsável.
+- Atualização do **estoque** conforme as vendas são realizadas.
 
 ### 5.5 Módulo de Relatórios
-O módulo de relatórios permitirá a geração de relatórios sobre:
+O módulo de relatórios permitirá a geração dos seguintes relatórios:
 
-- Vendas realizadas
-- Produtos em estoque
-- Produtos vendidos
-- Faturamento total
-- Vendas por vendedor
-
----
-
-# 2. Banco de Dados
-
-## 2.1 Desenho do MER (Modelo Entidade-Relacionamento)
-
-### 2.1.1 Diagrama Conceitual (Entidades e Relacionamentos)
-As principais entidades do sistema são:
-
-- **Funcionário** (relacionado a Venda, Função)
-- **Produto** (relacionado a Venda)
-- **Venda** (relacionada a Produto, Funcionário)
-- **Cliente** (relacionado a Venda, opcional)
-
-### 2.1.2 Diagrama Lógico (Tabelas e Campos)
-O banco de dados será composto pelas seguintes tabelas:
-
-#### 2.1.2.1 Tabelas
-
-- **Funcionários**
-  - `id_funcionario` (PK)
-  - `nome`
-  - `cpf_cnpj`
-  - `email`
-  - `login`
-  - `senha`
-  - `funcao`
-  - `telefone`
-  - `status`
-  - `data_registro`
-
-- **Produtos**
-  - `id_produto` (PK)
-  - `nome`
-  - `descricao`
-  - `marca`
-  - `preco`
-  - `quantidade_estoque`
-  - `categoria`
-  - `imagem_url`
-  - `data_cadastro`
-
-- **Vendas**
-  - `id_venda` (PK)
-  - `data_venda`
-  - `id_funcionario` (FK)
-  - `id_cliente` (FK - opcional)
-  - `valor_total`
-  - `forma_pagamento`
-  - `status_venda`
-  - `desconto_aplicado`
-
-- **Itens_Venda** (Tabela associativa entre Venda e Produto)
-  - `id_item_venda` (PK)
-  - `id_venda` (FK)
-  - `id_produto` (FK)
-  - `quantidade`
-  - `valor_unitario`
+- **Vendas realizadas** (total, por produto, por vendedor, etc.).
+- **Produtos em estoque** (quantidade atual, produtos em baixa).
+- **Produtos vendidos** (relatório detalhado de transações de venda).
+- **Faturamento total** (valores totais das vendas realizadas).
+- **Vendas por vendedor** (desempenho individual de cada funcionário).
 
 ---
 
-# 3. Mapa do Site
+## 6. Diagrama do Modelo Entidade-Relacionamento (MER)
 
-O Mapa do Site ilustra como as páginas estão organizadas no sistema e como os funcionários navegarão entre elas.
+O diagrama a seguir mostra a relação entre as entidades do sistema, incluindo **Funcionários**, **Produtos**, **Vendas** e **Relatórios**:
 
-## 3.1 Estrutura do Sistema
+*(Aqui você pode adicionar um diagrama do MER ou linkar para o arquivo se tiver gerado um)*
 
-### 3.1.1 Página Inicial
-- Login/Registro de Funcionário
-- Acesso aos Produtos
-- Acesso ao Painel Administrativo
-
-### 3.1.2 Área do Funcionário
-- Perfil
-- Histórico de Vendas
-- Alteração de Senha
-
-### 3.1.3 Área Administrativa
-- Cadastro de Produtos
-- Cadastro de Funcionários
-- Relatórios de Vendas
-- Gerenciamento de Estoque
-
-### 3.1.4 Página de Produtos
-- Exibição dos Produtos
-- Filtro de Busca por Categoria, Preço
+---
+   
+Exemplo de link para imagem:
+```markdown
+![Diagrama MER](link_da_imagem_do_diagrama)
