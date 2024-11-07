@@ -108,4 +108,4 @@ O diagrama a seguir mostra a relação entre as entidades do sistema, incluindo 
 ![Diagrama MER_CONCEITUAL](link_da_imagem_do_diagrama)
 
 ### 6.2 Lógico
-![Diagrama MER_LOGICO](link_da_imagem_do_diagrama)
+![Diagrama MER_LOGICO](/imagens_readme/mer_logico)
