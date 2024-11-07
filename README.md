@@ -104,10 +104,8 @@ O módulo de relatórios permitirá a geração dos seguintes relatórios:
 
 O diagrama a seguir mostra a relação entre as entidades do sistema, incluindo **Funcionários**, **Produtos**, **Vendas** e **Relatórios**:
 
-*(Aqui você pode adicionar um diagrama do MER ou linkar para o arquivo se tiver gerado um)*
+### 6.1 Conceitual
+![Diagrama MER_CONCEITUAL](link_da_imagem_do_diagrama)
 
----
-   
-Exemplo de link para imagem:
-```markdown
-![Diagrama MER](link_da_imagem_do_diagrama)
+### 6.2 Lógico
+![Diagrama MER_LOGICO](link_da_imagem_do_diagrama)
