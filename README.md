@@ -24,7 +24,6 @@ O objetivo principal do sistema é o controle de estoque e vendas de óculos, id
 ### 2.1 Cadastro de Funcionários
 Os dados mantidos para o cadastro de funcionários incluem:
 
-- **ID do Funcionário** (chave primária)
 - **Nome completo**
 - **CPF**
 - **Carteira de Trabalho**
@@ -39,7 +38,6 @@ Os dados mantidos para o cadastro de funcionários incluem:
 ### 2.2 Cadastro de Óculos
 Os dados mantidos para o cadastro de óculos incluem:
 
-- **ID do Óculos** (chave primária)
 - **Marca**
 - **Modelo/Nome do produto**
 - **Cor**
@@ -51,13 +49,10 @@ Os dados mantidos para o cadastro de óculos incluem:
 ### 2.3 Registro de Vendas
 Os dados registrados para cada venda incluem:
 
-- **ID da venda** (chave primária)
 - **Data da venda**
 - **Forma de pagamento** (cartão de crédito, débito, dinheiro)
 - **Status da venda** (concluída, pendente, cancelada)
 - **Descontos aplicados** (se houver)
-- **ID do vendedor** (funcionário que registrou a venda)
-- **ID do produto** (produtos vendidos)
 
 ---
 
