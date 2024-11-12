@@ -16,100 +16,43 @@
         </div>
     </header>
     <main id="conteudo_especifico">
-		<form id="formulario" method="" action="">
-            <h1> CADASTRO DE FUNCIONÁRIOS </h1>
-		    <table class="centralizar">	
-				<tr>
-					<td>
-					    <p> Nome: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-					    <p> CPF: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-					    <p> Carteira de Trabalho: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-					    <p> Telefone: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-					    <p> Data de Registro: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-					    <p> Endereço: </p>
-					</td>
-				    <td>
-						<p> <input type="text" required> </p>
-					</td>
-				</tr>
-
-				<tr>
-				    <td>
-						<p> Login:  </p>
-					</td>
-					<td>
-						<p> <input type="text" required>  </p>
-					</td>
-			
-				</tr>
-				<tr>
-					<td>
-						<p> Senha:  </p>
-					</td>
-					<td>
-						<p> <input type="password" required>  </p>
-					</td>
-				</tr>
-
-                <tr>
-					<td>
-						<p> Função:  </p>
-					</td>
-					<td>
-						<p> 
-							<input type="radio" value="estoquista" checked> Estoquista
-							<input type="radio" value="vendedor"> Vendedor  
-                        </p>
-					</td>
-				</tr>
+        <form id="formulario">
+            <fieldset>
+                <legend>CADASTRO DE FUNCIONÁRIOS</legend>
                 
-				<tr>
-					<td colspan="2">
-						<p> <input type="submit" value="Cadastrar Funcionário">  </p>
-					</td>
-				</tr>
-			</table>
-		</form>	
+                <label>Nome:</label>
+                <input type="text" placeholder="Digite seu nome" required>
+                
+                <label>CPF:</label>
+                <input type="text" placeholder="Digite seu CPF" required>
+                
+                <label>Carteira de Trabalho:</label>
+                <input type="text" placeholder="Digite seu Carteira de Trabalho" required>
+                
+                <label>Telefone:</label>
+                <input type="text" placeholder="Digite seu Telefone" required>
+                
+                <label>Data de Registro:</label>
+                <input type="text" placeholder="Digite sua Data de Registro" required>
+                
+                <label>Endereço:</label>
+                <input type="text" placeholder="Digite seu Endereço" required>
+                
+                <label>Login:</label>
+                <input type="text" placeholder="Digite seu Login" required>
+                
+                <label>Senha:</label>
+                <input type="password" placeholder="Digite sua Senha" required>
+                
+                <label>Função:</label>
+                <p>
+                    <input type="radio" value="estoquista" checked> Estoquista
+                    <input type="radio" value="vendedor"> Vendedor
+                </p>
+                
+                <input type="submit" value="Cadastrar Funcionário">
+            </fieldset>
+        </form>
     </main>
 
     <footer id="rodape">
