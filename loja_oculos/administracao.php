@@ -10,8 +10,7 @@
     <header id="cabecalho">
         <div id="topo">
             <div id="logo">
-                <h1>Imagem da logo da Loja</h1>
-                <h1>Nome da Loja</h1>
+                <img src="img/bob_glasses.gif" alt="Logo da Loja">
             </div>
         </div>
     </header>

@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <title>Home</title>
 </head>
 <body>
     <header id="cabecalho">
-        <div id="topo">
+		<div id="topo">
             <div id="logo">
-                <img src="caminho-da-imagem" alt="Logo da Loja">
-                <h1>Nome da Loja</h1>
+                <img src="img/bob_glasses.gif" alt="Logo da Loja">
             </div>
         </div>
     </header>
@@ -47,9 +47,10 @@
                     <option value="quadrado">Quadrado</option>
                 </select>
                 
-				<div class="gif-container">
-					<img src="img/bob_glasses.gif" alt="Óculos animado">
-				</div>
+				<div class="preview-area">
+            		<img src="img/oculos-exemplo.png" alt="Exemplo de Óculos">
+            		<p>Área de visualização do óculos</p>
+        		</div>
 
                 <input type="submit" value="Cadastrar Óculos">
             </fieldset>
