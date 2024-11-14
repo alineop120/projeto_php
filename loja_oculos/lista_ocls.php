@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -14,14 +18,19 @@
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
             </div>
         </div>
+        <div id="menu_global"  class="menu_global">
+			<p align="right"> 
+				Olá, <?php include "valida_login.php"; ?> 
+			</p>
+			<?php include "menu_local.php"; ?>               
+		</div>
     </header>
+    
     <main id="conteudo_especifico">
-    <h1> ÓCULOS </h1>
-		<p align="right"> 
-			<a href="cadastra_amp.php"> 
-				Cadastrar amplificador
-			</a> 
-		</p>
+        <h1> ÓCULOS </h1>
+            <p align="right"> 
+                <a href="cadastra_ocls.php">Cadastrar óculos</a> 
+            </p>
 				
 				
 				
