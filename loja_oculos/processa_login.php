@@ -1,19 +1,8 @@
 <?php
-	/* 
-		FUNCIONALIDADE:
-			1º Conexão com Banco de Dados;
-			2º Recebem o login e a senha;
-			3º Verificam no Banco de Dados SE o login e senha recebidos existem
-				Se existirem
-					ENTÃO entram no sistema, arquivo administrador.php
-				SENÃO 
-					Mensagem de erro
-					Voltar para index.php
-	*/
 	session_start();
 	
 //  $conectar = mysqli_connect('localhost', '[login]', '[senha]', '[database]');                                                        
-	$conectar = mysqli_connect('localhost', 'root', '', 'db_loja_ocls');
+	$conectar = mysqli_connect('localhost', 'root', '', 'db_loja_oculos');
 	
 	$login = $_POST["login"]; 
 	$senha = $_POST["senha"];

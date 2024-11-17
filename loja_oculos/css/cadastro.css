@@ -1,0 +1,46 @@
+/* Estilos específicos para a página de cadastro */
+#conteudo_especifico {
+    position: relative;
+    width: 1200px;
+    margin: 2em auto;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+fieldset {
+    width: 800px;
+    background-color: #f5f5f5;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: none;
+    position: relative;
+}
+
+.preview-area {
+    position: relative;
+    width: 320px;
+    border: 3px dashed #39736D;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.preview-area img {
+    width: 300px;
+    height: auto;
+}
+
+#formulario input[type="text"],
+#formulario input[type="password"],
+#formulario select {
+    width: 300px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #39736D;
+    border-radius: 5px;
+    font-size: 16px;
+} 

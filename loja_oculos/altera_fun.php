@@ -7,10 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/visualizacao.css">
+    <link rel="stylesheet" type="text/css" href="css/alterar.css">
     <title>Home</title>
 </head>
 <body>
@@ -27,23 +26,14 @@
 			</div>
         </div>
     </header>
-    <main id="conteudo_especifico">
-    <h1> ÓCULOS </h1>
-		<p align="right"> 
-			<a href="cadastra_ocls.php"> 
-				Cadastrar óculos
-			</a> 
-		</p>
-				
-				
-				
-				
-				
-				
-				
-				
-    </main>
 
+    <main id="conteudo_especifico">
+    <h1> ADMINISTRAÇÃO </h1>
+		<p>
+			Seja bem-vindo ao sistema de controle de estoque e venda de oculos da loja mais incrivel desse Brasil!
+		</p>
+    </main>
+    
     <footer id="rodape">
 		<div id="texto_institucional">
 			<div id="texto_institucional">

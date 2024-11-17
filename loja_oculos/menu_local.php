@@ -22,7 +22,7 @@
 		</ul>
 <?php
 	}
-	else if($_SESSION["funcao"] == "vendedor") 
+	else if($_SESSION["funcao"] == "vendedor")
 	{
 ?>
 		<ul>
@@ -31,8 +31,8 @@
 			<li><a href="logout.php">Sair</a></li>
 		</ul>
 <?php
-	}
-    else
+	} 
+	else 
 	{
 ?>
 		<ul>
