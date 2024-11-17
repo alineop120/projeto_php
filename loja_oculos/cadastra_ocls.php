@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <title>Home</title>
 </head>
 <body>
@@ -13,6 +18,12 @@
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
             </div>
+            <div id="menu_global"  class="menu_global">
+				<p align="right"> 
+					Olá, <?php include "valida_login.php"; ?> 
+				</p>
+				<?php include "menu_local.php"; ?>               
+			</div>
         </div>
     </header>
 

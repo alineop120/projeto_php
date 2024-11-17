@@ -1,166 +1,83 @@
+﻿/* Estilos comuns a todas as páginas */
 body {
-	background: linear-gradient(45deg, #ADD8E6, #87CEEB);
+    background-image: linear-gradient(rgba(0, 191, 255, 0.9), rgba(0, 191, 255, 0.2)), url('../img/background_layout.jpg');
+    background-size: cover;          /* Cobre toda a área */
+    background-position: center;     /* Centraliza a imagem */
+    background-repeat: no-repeat;    /* Não repete a imagem */
+    background-attachment: fixed;    /* Mantém a imagem fixa durante a rolagem */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;              /* Garante que o fundo cubra toda a altura */
 }
-#cabecalho {	
-	margin: 10px;
-	font-family: 'Segoe UI', Arial, sans-serif;
-	
+
+#cabecalho {    
+    margin: 50px;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 #topo {
-	padding: 10px;
-	display: grid;
-	grid-template-columns: auto auto;
-	margin: 0 auto 20px;
-	grid-gap: 10px;
-	border-radius: 10px;
-	border: none;
-	background-color: #f2ce0091;
-	color: white;
-	justify-content: space-between;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto;    
+    margin: 0 auto 20px;    
+    grid-gap: 10px;
+    border-radius: 10px;    
+    background-color: rgba(255, 255, 0, 0.5);
+    color: #333;
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(255, 105, 180,0.2);
 }
 
 #logo {
     display: flex;
     align-items: center;
-    gap: 10px; /* espaço entre a imagem e o texto */
+    gap: 10px;
 }
 
 #logo img {
-    max-height: 100px; /* Aumentado de 50px para 100px */
+    max-height: 100px;
     width: auto;
 }
 
-#logo h1 {
-    margin: 0; /* remove margens padrão do h1 */
-    font-size: 32px;      /* Opcional: aumentar também o tamanho do texto ao lado */
-}
-
-#logo h4{
-	line-height: 0px;
-	word-spacing: 40px; 
-}
-
-/* div CONTEUDO_ESPECIFICO  */
-#conteudo_especifico {
-    position: relative;
-    width: 1200px;      /* Largura total da área */
-    margin: 2em auto;   /* Margem automática para centralizar */
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-#formulario {
-    flex: 1;
-}
-
-fieldset {
-    background-color: #f5f5f5;
+#descricao_pagina {
     width: 800px;
-    height: auto;
+    margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border: none;
-    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-legend {
-	background-color: #39736D;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 24px;
-}
-
-#formulario label {
-    font-weight: bold;
+#descricao_pagina h1 {
+    margin: 0;
     color: #333;
-    margin-bottom: 5px;
-    display: block;
 }
 
-#formulario input[type="text"],
-#formulario input[type="password"],
-#formulario select {
-    width: 300px;
+#descricao_pagina p {
+    margin: 0;
+    color: #333;
+}
+
+/* Estilo do rodapé */
+#rodape {    
     padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #39736D;
-    border-radius: 5px;
-    font-size: 16px;
+    display: flex;
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    margin: 20px auto 0;
+    color: #333;
+    gap: 20px;               /* Espaço entre os elementos */
 }
 
-#formulario input[type="file"] {
-    position: relative; /* Alterado para relative */
-    left: 95px;
-    width: 225px;
-    margin-bottom: 10px;
+#rodape h6 {
+    display: inline-block;
+    margin: 0;               /* Remove margens para melhor controle */
+    line-height: normal;
+    text-align: center;      /* Centraliza o texto */
 }
 
-#formulario input[type="submit"] {
-    background-color: #39736D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
 
-#formulario input[type="submit"]:hover {
-    background-color: #39736D;
-}
-
-/* div RODAPE */
-#rodape {	
-	padding: 10px;
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto;
-	margin: 20px auto 0;
-	grid-gap: 5px;
-	border-radius: 10px;
-	background-color: #333;
-	color: #f5f5f5;	
-	justify-content: space-between;
-	box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#rodape h6{
-	line-height: 0px;
-	word-spacing: 0px; 
-	margin: 12px auto 12px 12px;
-}
-
-.borda {
-	border: solid black 2px;
-}
-
-.gif-container {
-    position: absolute;
-    top: 20px;           /* Distância do topo */
-    right: 50px;        /* Aumentado de 20px para 100px para mover mais para esquerda */
-}
-
-.gif-container img {
-    width: 300px;        /* Mantido o tamanho aumentado */
-    height: auto;
-}
-
-.preview-area {
-    position: absolute;
-    top: 50%;           
-    transform: translateY(-50%);
-    right: 100px;        
-    border: 3px dashed #39736D;  /* Borda tracejada com a cor do tema */
-    padding: 10px;              /* Espaço interno */
-    border-radius: 10px;        /* Cantos arredondados */
-}
-
-.preview-area img {
-    width: 300px;        
-    height: auto;
-}

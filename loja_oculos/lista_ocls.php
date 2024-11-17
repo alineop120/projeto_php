@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -5,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/visualizacao.css">
     <title>Home</title>
 </head>
 <body>
@@ -13,13 +19,19 @@
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
             </div>
+            <div id="menu_global"  class="menu_global">
+				<p align="right"> 
+					Olá, <?php include "valida_login.php"; ?> 
+				</p>
+				<?php include "menu_local.php"; ?>               
+			</div>
         </div>
     </header>
     <main id="conteudo_especifico">
     <h1> ÓCULOS </h1>
 		<p align="right"> 
-			<a href="cadastra_amp.php"> 
-				Cadastrar amplificador
+			<a href="cadastra_ocls.php"> 
+				Cadastrar óculos
 			</a> 
 		</p>
 				
