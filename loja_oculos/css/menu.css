@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿/* menu_global */
 @keyframes colorChange {
     0% { color: rgba(255, 105, 180, 1); }
@@ -32,3 +33,39 @@
     transition: ease 0.5s;
 }
 
+=======
+﻿/* menu_global */
+@keyframes colorChange {
+    0% { color: rgba(255, 105, 180, 1); }
+    25% { color: rgba(119, 158, 128, 1); }
+    50% { color: rgba(0, 128, 255, 1); }
+    75% { color: rgba(0, 255, 0, 1); }
+    100% { color: rgba(255, 0, 0, 1); } /* Volta à cor inicial */
+}
+
+#menu_global p {
+    font-weight: bold; /* Deixa o texto em negrito */
+    text-align: right; /* Alinha o texto à direita */
+}
+
+#menu_global p span {
+    animation: colorChange 4s infinite; /* Animação de 4 segundos que se repete indefinidamente */
+}
+
+.menu_global li {
+    display: inline-flex;
+    margin: 10px;
+	
+}
+
+.menu_global a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu_global a:hover {
+    color: rgba(255, 105, 180, 1);
+    transition: ease 0.5s;
+}
+
+>>>>>>> 68e120d9fdaff8d7cbf1c55a229d164fe0bc4d6f
