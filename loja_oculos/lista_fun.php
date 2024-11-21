@@ -32,23 +32,25 @@
 			<?php
 				$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");			
 
-				$sql_consulta = "SELECT id_fun, nome_fun, nacionalidade_fun, natualidade_fun, cpf_fun, rg_fun, telefone_fun, data_fun, endereco_fun, funcao_fun, status_fun 
+				$sql_consulta = "SELECT id_fun, 
+										nome_fun, 
+										nacionalidade_fun, 
+										naturalidade_fun, 
+										cpf_fun, 
+										rg_fun, 
+										telefone_fun, 
+										data_fun, 
+										endereco_fun, 
+										funcao_fun, 
+										status_fun 
 								FROM funcionarios";
 				$resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 			?>
-			<p align="right"> <a href="cadastra_fun.php"> Cadastrar funcionário </a> </p>
+			<p align="right"> <a href="cadastra_fun.php" class="btn">Cadastrar Funcionário</a> </p>
 			<table width="100%">
 				<tr>
 					<th>
 						<p> Nome </p>
-					</th>
-
-                    <th>
-						<p> Naturalidade </p>
-					</th>
-                    
-                    <th>
-						<p> Nacionalidade </p>
 					</th>
 
 					<th>
@@ -56,19 +58,7 @@
 					</th>
 
 					<th>
-						<p> RG </p>
-					</th>
-
-					<th>
 						<p> Telefone </p>
-					</th>
-
-					<th>
-						<p> Data de Registro </p>
-					</th>
-
-					<th>
-						<p> Endereço </p>
 					</th>
 
 					<th>
@@ -91,24 +81,32 @@
 					<td>
 						<p>
 							<a href="exibe_fun.php?codigo=<?php echo $registro[0]?>"> 
-								<?php 
-									echo "$registro[1]";
-								?>
+								<?php echo "$registro[1]"; //Nome ?>
 							</a>
 						</p>
 					</td>
 
 					<td>
 						<p>									 
-							<?php echo "$registro[2]"; ?>
+							<?php echo "$registro[4]"; //CPF ?>
 						</p>
 					</td>
 
 					<td>
 						<p>									 
-							<?php 
-								echo "$registro[3]";
-							?>
+							<?php echo "$registro[6]"; //Telefone ?>
+						</p>
+					</td>
+
+					<td>
+						<p>
+							<?php echo "$registro[9]"; //Função ?>
+						</p>
+					</td>
+
+					<td>
+						<p>
+							<?php echo "$registro[10]"; //Status ?>
 						</p>
 					</td>
 
@@ -127,12 +125,14 @@
     </main>
 
     <footer id="rodape">
-		<div id="texto_institucional">
 			<div id="texto_institucional">
-				<h6> OCLS - CONTROL </h6> 
-				<h6> [Endereço da Loja] -- Fone: (61) 9966 - 6677 </h6> 
-			</div> 
-		</div>
+				<div id="texto_institucional">
+					<h6>GEEK GLASSES - CONTROL</h6>
+					<h6>Rua do Rock, 666</h6>
+					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
+					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
+				</div> 
+			</div>
     </footer>
 </body>
 </html>

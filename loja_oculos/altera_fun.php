@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/alterar.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
     <title>Home</title>
 </head>
 <body>
@@ -28,20 +28,120 @@
         </div>
     </header>
 
-    <main id="conteudo_especifico">
-    <h1> ADMINISTRAÇÃO </h1>
-		<p>
-			Seja bem-vindo ao sistema de controle de estoque e venda de oculos da loja mais incrivel desse Brasil!
-		</p>
+    <main id="conteudo_especifico" class="centralisar">
+		<?php
+			$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");
+				
+			$cod = $_GET["codigo"];
+								
+			$sql_pesquisa = "SELECT nome_fun, nacionalidade_fun, naturalidade_fun, cpf_fun, rg_fun, telefone_fun, data_fun, endereco_fun, login_fun, senha_fun, funcao_fun, status_fun 
+								FROM funcionarios
+								WHERE id_fun = '$cod'";
+			$resultado_pesquisa = mysqli_query ($conectar, $sql_pesquisa);	
+					
+			$registro = mysqli_fetch_row($resultado_pesquisa);
+		?>
+		<form method="post" action="processa_altera_fun.php">
+			<fieldset>
+				<legend>Alterar Óculos</legend>
+				<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
+				<input type="hidden" name="funcao" value="<?php echo "$registro[1]"; ?>">
+				<?php 
+					if ($registro[10] <> "administrador") 
+					{
+				?>
+						<label> Nome: </label> 
+						<input type="text" name="nome" value="<?php echo "$registro[0]";?>" required>
+
+						<label> Nacionalidade: </label> 
+						<input type="text" name="nacionalidade" value="<?php echo "$registro[1]";?>" required>
+
+						<label> Naturalidade: </label> 
+						<input type="text" name="naturalidade" value="<?php echo "$registro[2]";?>" required>
+
+						<label> CPF: </label> 
+						<input type="text" name="cpf" value="<?php echo "$registro[3]";?>" required>
+
+						<label> RG: </label> 
+						<input type="text" name="rg" value="<?php echo "$registro[4]";?>" required>
+
+						<label> Telefone: </label> 
+						<input type="text" name="telefone" value="<?php echo "$registro[5]";?>" required>
+
+						<label> Data de Registro: </label> 
+						<input type="text" name="data-registro" value="<?php echo "$registro[6]";?>" required>
+
+						<label> Endereço: </label> 
+						<input type="text" name="endereco" value="<?php echo "$registro[7]";?>" required>
+						
+						<label> Login: </label>
+						<input type="text" name="login" value="<?php echo "$registro[8]";?>" required>
+						
+						<label> Senha: </label>
+						<input type="password" name="senha" value="<?php echo "$registro[9]";?>" required>
+
+						<Label> Função: </Label>							
+						<input type="radio" name="funcao" value="estoquista" 
+							<?php
+								if ($registro[10] == "estoquista") {
+									echo "checked";
+								}
+							?>> Estoquista
+						<input type="radio" name="funcao" value="vendedor"
+							<?php
+								if ($registro[10] == "vendedor") {
+									echo "checked";
+								}
+							?>> Vendedor
+						
+						<label> Status: </label>
+						<select name="status">
+							<option value="ativo"
+								<?php
+									if ($registro[11] == "ativo") {
+										echo "selected";
+									}
+								?> > Ativo 
+							</option>
+							<option value="inativo"<?php
+								if ($registro[11] == "inativo") {
+									echo "selected";
+								}
+								?> > Inativo 
+							</option>
+						</select>
+						
+						<input type="submit" value="Alterar Funcionário">
+				<?php
+					}
+					else 
+					{
+				?>
+						<label> Nome: <?php echo "$registro[0]";?> </label>
+						<label> Função: <?php echo "$registro[10]";?> </label>
+						<label> Login: <?php echo "$registro[8]";?> </label>
+
+						<label> Senha: </label>
+						<input type="password" name="senha" value="<?php echo "$registro[9]";?>" required>  
+						
+						<label> Status:  Ativo </label>
+						<input type="submit" value="Alterar Usuario">								
+				<?php
+					}
+				?>
+			</fieldset>
+		</form>	
     </main>
     
     <footer id="rodape">
-		<div id="texto_institucional">
 			<div id="texto_institucional">
-				<h6> OCLS - CONTROL </h6> 
-				<h6> [Endereço da Loja] -- Fone: (61) 9966 - 6677 </h6> 
-			</div> 
-		</div>
+				<div id="texto_institucional">
+					<h6>GEEK GLASSES - CONTROL</h6>
+					<h6>Rua do Rock, 666</h6>
+					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
+					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
+				</div> 
+			</div>
     </footer>
 </body>
 </html>

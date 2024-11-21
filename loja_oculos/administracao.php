@@ -30,16 +30,19 @@
     <main id="descricao_pagina">
         <h1> ADMINISTRAÇÃO </h1>
 		<p>
-			Seja bem-vindo ao sistema de controle de estoque e venda de oculos da loja mais incrivel desse Brasil!
+            Seja bem-vindo ao Sistema Subáquático do Controle, Estoque e Venda de Óculos da Loja Mais Incrível Desse Brasil!
+        </p>
+        <p>
+            Prepare-se para uma experiência única! Aqui, a profundidade do nosso atendimento e a clareza dos nossos serviços vão te surpreender. Estamos prontos para garantir que você encontre os melhores óculos com a melhor gestão, tudo ao alcance de um clique! 🌊👓
 		</p>
     </main>
 
     <footer id="rodape">
 			<div id="texto_institucional">
 				<div id="texto_institucional">
-					<h6>OCULOS - CONTROL</h6>
+					<h6>GEEK GLASSES - CONTROL</h6>
 					<h6>Rua do Rock, 666</h6>
-					<h6>E-mail: <a href="mailto:contato@ampli_control.com.br">contato@ampli_control.com.br</a></h6>
+					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
 					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
 				</div> 
 			</div>

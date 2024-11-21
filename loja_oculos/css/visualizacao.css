@@ -3,6 +3,17 @@
     position: relative;
     width: 1200px;
     margin: 2em auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+#conteudo_especifico h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#conteudo_especifico p {
+    font-size: 18px;
 }
 
 .card-oculos {
@@ -21,4 +32,44 @@
 
 .info-oculos {
     margin-top: 10px;
+}
+
+.btn {
+    display: inline-block; /* Faz o link se comportar como um botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/*Design da tabela*/
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre as bordas */
+}
+
+th, td {
+    border: 2px solid yellow; /* Borda amarela para as células */
+    padding: 10px; /* Espaçamento interno nas células */
+    text-align: center; /* Alinhamento do texto à esquerda */
+}
+
+th {
+    background-color: #FFD700; /* Cor de fundo amarela para o cabeçalho */
+    color: black; /* Cor do texto do cabeçalho */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+}
+
+tr:hover {
+    background-color: #ffeb3b; /* Cor de fundo ao passar o mouse */
 } 

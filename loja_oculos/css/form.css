@@ -27,6 +27,24 @@ legend {
     font-size: 24px;
 }
 
+label {
+    font-weight: bold;
+} 
+
+.preview-area {
+    position: relative;
+    width: 320px;
+    border: 3px dashed #39736D;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.preview-area img {
+    width: 300px;
+    height: auto;
+}
+
 #formulario input[type="text"],
 #formulario input[type="password"] {
     width: 300px;
@@ -45,4 +63,4 @@ legend {
     border-radius: 4px;
     cursor: pointer;
     float: right;
-} 
+}

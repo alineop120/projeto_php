@@ -4,10 +4,10 @@
 ?>
 		<ul>
 			<li><a href="administracao.php">Administração</a></li>
-			<li><a href="lista_fun.php">Funcionário</a></li>
+			<li><a href="lista_fun.php">Funcionários</a></li>
 			<li><a href="lista_ocls.php">Óculos</a></li>
 			<li><a href="vendas.php">Vendas</a></li>
-			<li><a href="relatorios.php">Relatorios</a></li>
+			<li><a href="relatorios.php">Relatórios</a></li>
 			<li><a href="logout.php">Sair</a></li>
 		</ul>
 <?php
@@ -37,7 +37,7 @@
 ?>
 		<ul>
 			<li><a href="administracao.php">Administração</a></li>
-			<li><a href="relatorios.php">Relatorios</a></li>
+			<li><a href="relatorios.php">Relatórios</a></li>
 			<li><a href="logout.php">Sair</a></li>
 		</ul>
 <?php
