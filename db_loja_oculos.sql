@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19/11/2024 às 17:27
+-- Tempo de geração: 21/11/2024 às 03:52
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `funcionarios` (
   `id_fun` int(11) NOT NULL,
   `nome_fun` varchar(45) NOT NULL,
-  `natualidade_fun` varchar(45) NOT NULL,
+  `naturalidade_fun` varchar(45) NOT NULL,
   `nacionalidade_fun` varchar(45) NOT NULL,
   `cpf_fun` varchar(45) NOT NULL,
   `rg_fun` varchar(45) NOT NULL,
@@ -40,15 +40,16 @@ CREATE TABLE `funcionarios` (
   `login_fun` varchar(45) NOT NULL,
   `senha_fun` varchar(45) NOT NULL,
   `funcao_fun` varchar(45) NOT NULL,
-  `status_fun` varchar(45) NOT NULL
+  `status_fun` varchar(45) NOT NULL DEFAULT 'ativo'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Despejando dados para a tabela `funcionarios`
 --
 
-INSERT INTO `funcionarios` (`id_fun`, `nome_fun`, `natualidade_fun`, `nacionalidade_fun`, `cpf_fun`, `rg_fun`, `telefone_fun`, `data_fun`, `endereco_fun`, `login_fun`, `senha_fun`, `funcao_fun`, `status_fun`) VALUES
-(1, 'Administrador do Sistema', 'São Paulo/SP', 'Brasileiro', '052.923.470-00', '37.659.381-7', '(83) 2145-8057', '17/11/2024', 'Rua das Tecnologias, 250 - Apto 301', 'admin', '1', 'administrador', 'ATIVO');
+INSERT INTO `funcionarios` (`id_fun`, `nome_fun`, `naturalidade_fun`, `nacionalidade_fun`, `cpf_fun`, `rg_fun`, `telefone_fun`, `data_fun`, `endereco_fun`, `login_fun`, `senha_fun`, `funcao_fun`, `status_fun`) VALUES
+(1, 'Administrador do Sistema', 'São Paulo/SP', 'Brasileiro', '052.923.470-00', '37.659.381-7', '(83) 2145-8057', '17/11/2024', 'Rua das Tecnologias, 250 - Apto 301', 'admin', '1', 'administrador', 'ATIVO'),
+(2, 'Rian Silva', 'Brasileiro', 'Itajubá/MG', '737.892.476-85', '23.859.903-6', '(32) 2554-1451', '05/06/1999', 'Avenida 360, lote 6', 'rs', 'rs', 'estoquista', 'ativo');
 
 -- --------------------------------------------------------
 
@@ -66,11 +67,18 @@ CREATE TABLE `oculos` (
   `material_armacao_ocls` varchar(45) NOT NULL,
   `cor_lente_ocls` varchar(45) NOT NULL,
   `tipo_lente_ocls` varchar(45) NOT NULL,
-  `preco_olcs` decimal(10,2) NOT NULL,
+  `preco_ocls` decimal(10,2) DEFAULT NULL,
   `imagem_ocls` varchar(255) NOT NULL,
-  `fila_compra_ocls` varchar(1) NOT NULL,
-  `vendas_id_ven` int(11) NOT NULL
+  `fila_compra_ocls` varchar(1) NOT NULL DEFAULT 'N',
+  `vendas_id_ven` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Despejando dados para a tabela `oculos`
+--
+
+INSERT INTO `oculos` (`id_ocls`, `nome_ocls`, `marca_ocls`, `tipo_ocls`, `modelo_ocls`, `cor_armacao_ocls`, `material_armacao_ocls`, `cor_lente_ocls`, `tipo_lente_ocls`, `preco_ocls`, `imagem_ocls`, `fila_compra_ocls`, `vendas_id_ven`) VALUES
+(1, 'RX5154 ', 'ray-ban', 'grau', 'clubmaster', 'preto-fusco', 'metal', 'transparente', 'demo-lens', 836.00, 'img/Ray-Ban Clubmaster RX5154 - Preto Fosco.png', 'N', NULL);
 
 -- --------------------------------------------------------
 
@@ -119,13 +127,13 @@ ALTER TABLE `vendas`
 -- AUTO_INCREMENT de tabela `funcionarios`
 --
 ALTER TABLE `funcionarios`
-  MODIFY `id_fun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_fun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `oculos`
 --
 ALTER TABLE `oculos`
-  MODIFY `id_ocls` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ocls` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `vendas`
