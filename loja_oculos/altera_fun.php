@@ -93,6 +93,12 @@
 									echo "checked";
 								}
 							?>> Vendedor
+						<input type="radio" name="funcao" value="financeiro"
+							<?php
+								if ($registro[10] == "financeiro") {
+									echo "checked";
+								}
+							?>> Financeiro
 						
 						<label> Status: </label>
 						<select name="status">

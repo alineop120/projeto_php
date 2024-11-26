@@ -32,31 +32,37 @@
             <fieldset>
                 <legend>CADASTRO DE FUNCIONÁRIOS</legend>
                 
-                <label>Nome:</label>
-                <input type="text" name="nome" placeholder="Digite seu nome" required>
+                <label> Nome: </label>
+                <input type="text" name="nome" placeholder="Digite o nome" required>
+
+                <label> Nascionalidade: </label>
+                <input type="text" name="nascionalidade" placeholder="Digite a Nascionalidade" required>
+
+                <label> Natuaralidade: </label>
+                <input type="text" name="naturalidade" placeholder="Digite a Naturalidade" required>
                 
-                <label>CPF:</label>
-                <input type="text" name="cpf" placeholder="Digite seu CPF" required>
+                <label> CPF: </label>
+                <input type="text" name="cpf" placeholder="Digite o CPF" required>
                 
-                <label>Carteira de Trabalho:</label>
-                <input type="text" name="carteira-trabalho" placeholder="Digite seu Carteira de Trabalho" required>
+                <label> RG: </label>
+                <input type="text" name="rg" placeholder="Digite o RG" required>
                 
-                <label>Telefone:</label>
-                <input type="text" name="telefone" placeholder="Digite seu Telefone" required>
+                <label> Telefone: </label>
+                <input type="text" name="telefone" placeholder="Digite o Telefone" required>
                 
-                <label>Data de Registro:</label>
-                <input type="text" name="data-registro" placeholder="Digite sua Data de Registro" required>
+                <label> Data de Registro: </label>
+                <input type="text" name="data-registro" placeholder="Digite a Data de Registro" required>
                 
-                <label>Endereço:</label>
-                <input type="text" name="endereco" placeholder="Digite seu Endereço" required>
+                <label> Endereço: </label>
+                <input type="text" name="endereco" placeholder="Digite o Endereço" required>
                 
-                <label>Login:</label>
-                <input type="text" name="login" placeholder="Digite seu Login" required>
+                <label> Login: </label>
+                <input type="text" name="login" placeholder="Digite o Login" required>
                 
-                <label>Senha:</label>
-                <input type="password" name="senha" placeholder="Digite sua Senha" required>
+                <label> Senha: </label>
+                <input type="password" name="senha" placeholder="Digite a Senha" required>
                 
-                <label>Função:</label>
+                <label> Função: </label>
                 <p>
                     <input type="radio" name="funcao" value="estoquista" checked> Estoquista
                     <input type="radio" name="funcao" value="vendedor"> Vendedor

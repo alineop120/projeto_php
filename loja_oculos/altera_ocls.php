@@ -31,12 +31,11 @@ session_start();
 
             $cod = $_GET["codigo"];
 
-            $sql_pesquisa = "SELECT o.id_ocls, o.nome_ocls, o.marca_ocls, o.tipo_ocls, o.modelo_ocls, 
-                        o.cor_armacao_ocls, o.material_armacao_ocls, o.cor_lente_ocls, 
-                        o.tipo_lente_ocls, o.preco_ocls, v.descontos_ven
-                                FROM oculos o
-                                LEFT JOIN vendas v ON o.vendas_id_ven = v.id_ven
-                                WHERE o.id_ocls = '$cod'";
+            $sql_pesquisa = "SELECT id_ocls, nome_ocls, marca_ocls, tipo_ocls, modelo_ocls, 
+                        cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, 
+                        tipo_lente_ocls, preco_ocls
+                                FROM oculos 
+                                WHERE id_ocls = '$cod'";
             $resultado_pesquisa = mysqli_query($conectar, $sql_pesquisa);
 
             $registro = mysqli_fetch_row($resultado_pesquisa);
@@ -58,7 +57,6 @@ session_start();
 							}
 						?>> Lema21
                     </option>
-                        
                     <option value="oakley"
                         <?php
 							if ($registro[2] == "oakley") {
@@ -155,12 +153,12 @@ session_start();
 							}
 						?> > Cinza
                     </option>
-                    <option value="marrom"
+                    <option value="marrom-tartaruga"
                         <?php
-						    if ($registro[5] == "marrom") {
+						    if ($registro[5] == "marrom-tartaruga") {
 								echo "selected";
 							}
-						?> > Marrom
+						?> > Marrom Tartaruga
                     </option>
                     <option value="nude"
                         <?php
@@ -222,9 +220,16 @@ session_start();
 							}
 						?> > Metal
                     </option>
+                    <option value="injetado"
+                        <?php
+						    if ($registro[6] == "injetado") {
+								echo "selected";
+							}
+						?> > Injetado
+                    </option>
                 </select>
                 
-                <label> Cor da Lente: </label>
+                <label> Cor das Lentes: </label>
                 <select name="cor_lente" required>
                     <option value="dourado"
                         <?php
@@ -254,6 +259,13 @@ session_start();
 							}
 						?> > Azul
                     </option>
+                    <option value="marrom-tartaruga"
+                        <?php
+						    if ($registro[7] == "marrom-tartaruga") {
+								echo "selected";
+							}
+						?> > Marrom Tartaruga
+                    </option>
                 </select>
                 
                 <label> Tipo da Lente: </label>
@@ -279,9 +291,6 @@ session_start();
 
                 <label>Foto:</label>
                 <input type="file" name="foto">
-                
-                <label>Desconto:</label>
-                <input type="text" name="desconto" value="<?php echo "$registro[10]"; ?>" required>
                 
                 <input type="submit" value="Atualizar Óculos">
         </form>

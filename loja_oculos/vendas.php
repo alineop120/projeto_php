@@ -32,12 +32,13 @@
 		<?php
 			$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");	
 
-			$sql_consulta = "SELECT o.id_ocls, o.nome_ocls, o.marca_ocls, o.tipo_ocls, o.modelo_ocls, 
-                    o.cor_armacao_ocls, o.material_armacao_ocls, o.cor_lente_ocls, 
-                    o.tipo_lente_ocls, o.preco_ocls, v.descontos_ven
-                            FROM oculos o
-                            LEFT JOIN vendas v ON o.vendas_id_ven = v.id_ven
-                            WHERE o.fila_compra_ocls = 'N'";
+			$sql_consulta = "SELECT id_ocls, nome_ocls, marca_ocls, tipo_ocls, modelo_ocls,
+                    cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, 
+                    tipo_lente_ocls, preco_ocls, vendas_id_ven
+                            FROM oculos
+                            WHERE vendas_id_ven IS null 
+                            AND
+                                fila_compra_ocls = 'N'";
 		    $resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 		?>
 		<table width="100%">
@@ -51,7 +52,6 @@
                 <th> Cor da Lente </th>
                 <th> Tipo de Lente </th>
                 <th> Preço </th>
-                <th> Desconto </th>
                 <th> Ação </th>
             </tr>
             <?php
@@ -60,24 +60,39 @@
                 {
             ?>						
                     <tr height="50px">
-                        <td><?php echo $registro[1]; ?></td> <!-- Nome -->
-                        <td>
-                            <a href="exibe_amp.php?codigo=<?php echo $registro[0]; ?>">
-                            <?php echo $registro[2]; ?>
-                        </td> <!-- Marca -->
-                        <td><?php echo $registro[3]; ?></td> <!-- Tipo -->
-                        <td><?php echo $registro[4]; ?></td> <!-- Modelo -->
-                        <td><?php echo $registro[5]; ?></td> <!-- Cor da Armação -->
-                        <td><?php echo $registro[6]; ?></td> <!-- Material da Armação -->
-                        <td><?php echo $registro[7]; ?></td> <!-- Cor da Lente -->
-                        <td><?php echo $registro[8]; ?></td> <!-- Tipo de Lente -->
-                        <td><?php echo $registro[9]; ?></td> <!-- Preço -->
-                        <td><?php echo $registro[10]; ?></td> <!-- Desconto -->
-                        <td>
-                            <a href="processa_retira_fila.php?codigo=<?php echo $registro[0]; ?>">
-		    					Retirar da fila de compras
-							</a>                         
-                        </td>
+                        <td class="esquerda">
+                            <?php echo $registro[1]; ?></td> <!-- Nome -->
+                        <td> <!-- Marca -->
+                            <a href="exibe_ocls.php?codigo=<?php echo $registro[0]; ?>">
+                                <?php echo $registro[2]; ?>
+                            </a>
+                        </td> 
+                        <td class="esquerda">
+                            <?php echo $registro[3]; ?>
+                        </td> <!-- Tipo -->
+                        <td class="esquerda">
+                            <?php echo $registro[4]; ?>
+                        </td > <!-- Modelo -->
+                        <td class="esquerda">
+                            <?php echo $registro[5]; ?>
+                        </td> <!-- Cor da Armação -->
+                        <td class="esquerda">
+                            <?php echo $registro[6]; ?>
+                        </td> <!-- Material da Armação -->
+                        <td class="esquerda">
+                            <?php echo $registro[7]; ?>
+                        </td> <!-- Cor da Lente -->
+                        <td class="esquerda">
+                            <?php echo $registro[8]; ?>
+                        </td> <!-- Tipo de Lente -->
+                        <td class="esquerda">
+                            <?php echo $registro[9]; ?>
+                        </td> <!-- Preço -->
+                        <td class="direita">
+							<a href="processa_fila_compras.php?codigo=<?php echo $registro[0]?>">
+								Colocar na fila de compras	
+							</a>
+						</td>
                     </tr>
             <?php
                 }

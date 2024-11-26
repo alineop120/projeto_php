@@ -19,15 +19,26 @@
     move_uploaded_file($foto["tmp_name"], $foto_nome);
 
     // Inserir na tabela oculos
-    $sql_cadastrar = "INSERT INTO oculos (nome_ocls, marca_ocls, tipo_ocls, modelo_ocls, cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, tipo_lente_ocls, preco_olcs, imagem_ocls) 
+    $sql_cadastrar = "INSERT INTO oculos (nome_ocls, marca_ocls, tipo_ocls, modelo_ocls, cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, tipo_lente_ocls, preco_ocls, imagem_ocls) 
                     VALUES ('$nome', '$marca', '$tipo_ocls', '$modelo', '$cor_armacao', '$material_armacao', '$cor_lente', '$tipo_lente', '$preco', '$foto_nome')";
 
-    if (mysqli_query($conectar, $sql_cadastrar)) {
-        echo "<script>alert('Óculos cadastrados com sucesso!');</script>";
-        echo "<script>location.href = 'cadastra_ocls.php';</script>";    
+    $sql_resultado_cadastrar = mysqli_query ($conectar, $sql_cadastrar);
+    
+    if ($sql_resultado_cadastrar == true)
+    {
+        echo "<script>
+                alert('Óculos cadastrados com sucesso!');
+            </script>";
+        echo "<script>
+                location.href = 'cadastra_ocls.php';
+            </script>";    
     } else {
-        echo "<script>alert('Erro ao cadastrar os óculos: " . mysqli_error($conectar) . "');</script>";
-        echo "<script>location.href = 'cadastra_ocls.php';</script>";    
+        echo "<script>
+                alert('Erro ao cadastrar os óculos: " . mysqli_error($conectar) . "');
+            </script>";
+        echo "<script>
+                location.href = 'cadastra_ocls.php';
+            </script>";    
     }
 ?>
 

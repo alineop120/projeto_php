@@ -62,7 +62,7 @@
                 <select name="cor_armacao" required>
                     <option value="azul">Azul</option>
                     <option value="cinza">Cinza</option>
-                    <option value="marrom">Marrom</option>
+                    <option value="marrom-tartaruga">Marrom Tartaruga</option>
                     <option value="nude">Nude</option>
                     <option value="prata">Prata</option>
                     <option value="dourado">Dourado</option>
@@ -75,6 +75,7 @@
                     <option value="aluminio">Alumínio</option>
                     <option value="aco">Aço</option>
                     <option value="metal">Metal</option>
+                    <option value="injetado">Injetado</option>
                 </select>
 
                 <label>Cor da Lente:</label>
@@ -83,6 +84,7 @@
                     <option value="transparente">Transparente</option>
                     <option value="preto">Preto</option>
                     <option value="azul">Azul</option>
+                    <option value="marrom-tartaruga">Marrom Tartaruga</option>
                 </select>
                 
                 <label>Tipo da Lente:</label>
@@ -93,9 +95,6 @@
                 
                 <label>Preço do Óculos:</label>
                 <input type="text" name="preco" placeholder="Digite o preço" required>
-
-                <label>Desconto:</label>
-                <input type="text" name="desconto" placeholder="Digite o desconto" required>
                 
                 <label>Foto:</label>
                 <input type="file" name="foto" required>

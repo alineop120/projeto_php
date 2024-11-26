@@ -32,19 +32,17 @@
         <?php
 			$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");			
 				
-			$sql_consulta = "SELECT o.id_ocls, 
-                                    o.nome_ocls, 
-                                    o.marca_ocls, 
-                                    o.tipo_ocls, 
-                                    o.modelo_ocls, 
-                                    o.cor_armacao_ocls, 
-                                    o.material_armacao_ocls, 
-                                    o.cor_lente_ocls, 
-                                    o.tipo_lente_ocls, 
-                                    o.preco_ocls,
-                                    v.descontos_ven
-							FROM oculos o
-							LEFT JOIN vendas v ON o.vendas_id_ven = v.id_ven";
+			$sql_consulta = "SELECT id_ocls, 
+                                    nome_ocls, 
+                                    marca_ocls, 
+                                    tipo_ocls, 
+                                    modelo_ocls, 
+                                    cor_armacao_ocls, 
+                                    material_armacao_ocls, 
+                                    cor_lente_ocls, 
+                                    tipo_lente_ocls, 
+                                    preco_ocls
+							FROM oculos";
 			$resultado_consulta = mysqli_query ($conectar, $sql_consulta);					
 		?>
 		<p align="right"> <a href="cadastra_ocls.php" class="btn"> Cadastrar óculos </a> </p>
@@ -77,9 +75,6 @@
 				<th>
 					Preço
 				</th>							
-				<th>
-					Desconto
-				</th>
 				<th>
 					Ação
 				</th>
@@ -120,9 +115,6 @@
 						<td>
 							<?php echo $registro[9]; ?>							
 						</td>							
-						<td>
-							<?php echo $registro[10]; ?>							
-						</td>
 						<td>
 							<a href="altera_ocls.php?codigo=<?php echo $registro[0]?>">
 								Alterar	

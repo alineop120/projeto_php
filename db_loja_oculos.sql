@@ -89,8 +89,6 @@ INSERT INTO `oculos` (`id_ocls`, `nome_ocls`, `marca_ocls`, `tipo_ocls`, `modelo
 CREATE TABLE `vendas` (
   `id_ven` int(11) NOT NULL,
   `data_ven` varchar(45) NOT NULL,
-  `pagamento_ven` varchar(45) NOT NULL,
-  `status_ven` varchar(45) NOT NULL,
   `descontos_ven` varchar(45) NOT NULL,
   `funcionarios_id_fun` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
