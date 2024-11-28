@@ -36,9 +36,7 @@
                     cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, 
                     tipo_lente_ocls, preco_ocls, vendas_id_ven
                             FROM oculos
-                            WHERE vendas_id_ven IS null 
-                            AND
-                                fila_compra_ocls = 'N'";
+                            WHERE fila_compra_ocls = 'N'";
 		    $resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 		?>
 		<table width="100%">
@@ -62,11 +60,11 @@
                     <tr height="50px">
                         <td class="esquerda">
                             <?php echo $registro[1]; ?></td> <!-- Nome -->
-                        <td> <!-- Marca -->
+                        <td> 
                             <a href="exibe_ocls.php?codigo=<?php echo $registro[0]; ?>">
                                 <?php echo $registro[2]; ?>
                             </a>
-                        </td> 
+                        </td> <!-- Marca -->
                         <td class="esquerda">
                             <?php echo $registro[3]; ?>
                         </td> <!-- Tipo -->

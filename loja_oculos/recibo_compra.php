@@ -95,7 +95,7 @@
 						<td>
                             <p> <?php 
 									echo "$registro[8]"; 
-									$valor_total = $valor_total + $registro[2];
+									$valor_total = $valor_total + $registro[8];
 								?> </p>
 						</td>							
 					</tr>
@@ -104,7 +104,7 @@
 			?>
 		</table>
         <p> Total: <?php echo $valor_total; ?> </p>
-		<p> <a href="vendas.php"> Fechar recibo </a> </p>
+		<p> <a href="vendas.php" class="btn"> Fechar recibo </a> </p>
     </main>
 
     <footer id="rodape">
