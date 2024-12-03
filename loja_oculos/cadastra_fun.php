@@ -15,9 +15,10 @@
 </head>
 <body>
     <header id="cabecalho">
-		<div id="topo">
+        <div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
+                <h1> GEEK GLASSES </h1>
             </div>
             <div id="menu_global"  class="menu_global">
 				<p align="right"> 
@@ -32,43 +33,65 @@
             <fieldset>
                 <legend>CADASTRO DE FUNCIONÁRIOS</legend>
                 
-                <label> Nome: </label>
-                <input type="text" name="nome" placeholder="Digite o nome" required>
+                <div class="campo">
+                    <label> Nome: </label>
+                    <input type="text" name="nome" placeholder="Digite o nome" required>
+                </div>
 
-                <label> Nascionalidade: </label>
-                <input type="text" name="nascionalidade" placeholder="Digite a Nascionalidade" required>
+                <div class="campo">
+                    <label> Nascionalidade: </label>
+                    <input type="text" name="nascionalidade" placeholder="Digite a Nascionalidade" required>
+                </div>
+                
+                <div class="campo">
+                    <label> Natuaralidade: </label>
+                    <input type="text" name="naturalidade" placeholder="Digite a Naturalidade" required>
+                </div>
+                
+                <div class="campo">
+                    <label> CPF: </label>
+                    <input type="text" name="cpf" placeholder="Digite o CPF" required>
+                </div>
+                
+                <div class="campo">
+                    <label> RG: </label>
+                    <input type="text" name="rg" placeholder="Digite o RG" required>
+                </div>
 
-                <label> Natuaralidade: </label>
-                <input type="text" name="naturalidade" placeholder="Digite a Naturalidade" required>
+                <div class="campo">
+                    <label> Telefone: </label>
+                    <input type="text" name="telefone" placeholder="Digite o Telefone" required>
+                </div>
+
+                <div class="campo">
+                    <label> Data de Registro: </label>
+                    <input type="text" name="data-registro" placeholder="Digite a Data de Registro" required>
+                </div>
                 
-                <label> CPF: </label>
-                <input type="text" name="cpf" placeholder="Digite o CPF" required>
-                
-                <label> RG: </label>
-                <input type="text" name="rg" placeholder="Digite o RG" required>
-                
-                <label> Telefone: </label>
-                <input type="text" name="telefone" placeholder="Digite o Telefone" required>
-                
-                <label> Data de Registro: </label>
-                <input type="text" name="data-registro" placeholder="Digite a Data de Registro" required>
-                
-                <label> Endereço: </label>
-                <input type="text" name="endereco" placeholder="Digite o Endereço" required>
-                
-                <label> Login: </label>
-                <input type="text" name="login" placeholder="Digite o Login" required>
-                
-                <label> Senha: </label>
-                <input type="password" name="senha" placeholder="Digite a Senha" required>
-                
-                <label> Função: </label>
-                <p>
-                    <input type="radio" name="funcao" value="estoquista" checked> Estoquista
-                    <input type="radio" name="funcao" value="vendedor"> Vendedor
-                    <input type="radio" name="funcao" value="financeiro"> Financeiro
-                </p>
-                
+                <div class="campo">
+                    <label> Endereço: </label>
+                    <input type="text" name="endereco" placeholder="Digite o Endereço" required>
+                </div>
+
+                <div class="campo">
+                    <label> Login: </label>
+                    <input type="text" name="login" placeholder="Digite o Login" required>
+                </div>
+
+                <div class="campo">
+                    <label> Senha: </label>
+                    <input type="password" name="senha" placeholder="Digite a Senha" required>
+                </div>
+
+                <div class="campo">
+                    <label> Função: </label>
+                    <p>
+                        <input type="radio" name="funcao" value="estoquista" checked> Estoquista
+                        <input type="radio" name="funcao" value="vendedor"> Vendedor
+                        <input type="radio" name="funcao" value="financeiro"> Financeiro
+                    </p>
+                </div>
+
                 <input type="submit" value="Cadastrar Funcionário">
             </fieldset>
         </form>

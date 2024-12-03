@@ -35,7 +35,7 @@ fieldset {
 }
 
 legend {
-    background-color: #39736D;
+    background-color: #1b88fc;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -44,20 +44,6 @@ legend {
 
 label {
     font-weight: bold;
-}
-
-.preview-area {
-    position: relative;
-    width: 320px;
-    border: 3px dashed #39736D;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 50px;
-}
-
-.preview-area img {
-    width: 300px;
-    height: auto;
 }
 
 #formulario .campo {
@@ -73,19 +59,21 @@ label {
     width: 50%; /* Ajusta a largura para 100% do campo disponível */
     padding: 10px;
     margin: 8px 0;
-    border: 1px solid #39736D;
+    border: 1px solid #1b88fc;
     border-radius: 5px;
     font-size: 16px;
 }
 
 #formulario input[type="submit"] {
-    background-color: #39736D;
+    background-color: #1b88fc;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     float: right;
+    font-size: 18px;
+    text-align: center;
 }
 
 /* Para 4 colunas em telas ainda maiores */

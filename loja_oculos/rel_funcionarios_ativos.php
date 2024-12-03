@@ -29,31 +29,37 @@
         </div>
     </header>
     <main id="conteudo_especifico">
-        <h1> RELATÓRIO DE TOTAL DE VENDAS </h1>
+    <h1> RELATÓRIO DE FUNCIONÁRIOS ATIVOS</h1>
 		<?php
-			$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");			
+			$conectar = mysqli_connect("localhost", "root", "", "db_loja_oculos");
 					
-			$data = date ('d/m/Y');
-					
-			$sql_consulta_total_vendas = "SELECT preco_ocls
-                                            FROM oculos
-                                            WHERE fila_compra_ocls = 'V'";
-					
-		    $resultado_consulta = mysqli_query ($conectar, $sql_consulta_total_vendas);		
-					
-			$valor_total = 0;
-			while ($registro_total_vendas = mysqli_fetch_row ($resultado_consulta))
-			{
-				$valor_total = $valor_total + $registro_total_vendas[0];
-			}
+			$sql_pesquisa = "SELECT
+								nome_fun,
+								funcao_fun
+							FROM
+								funcionarios
+							WHERE 
+								status_fun = 'ativo'";
+			$resultado_pesquisa = mysqli_query ($conectar, $sql_pesquisa);
 		?>
-		
-		<table>
-			<tr>
-				<td>Total de vendas até a presente data: </td><td><?php echo $valor_total; ?></td>
+		<table width="100%">	
+			<tr height="50px">
+				<th> Nome </th>
+				<th> Função </th>
 			</tr>
+			<?php
+				while ($registro = mysqli_fetch_row($resultado_pesquisa)) 
+                {
+			?>
+					<tr height="50px">
+						<td> <?php echo $registro[0]?></td>
+                        <td> <?php echo $registro[1]?></td>
+					</tr>
+			<?php
+				}
+			?>
 		</table>
-		<p> <a class="btn" href="relatorios.php"> Voltar </a> </p>
+		<p> <a href="relatorios.php" class="btn"> Voltar </a> </p>
     </main>
 
     <footer id="rodape">

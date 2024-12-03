@@ -8,9 +8,19 @@
     font-size: 18px;
 }
 
+@font-face {
+    font-family:'fonteBobEsponja';
+    src:url("Spongeboy\ Me\ Bob.ttf");
+}
+
 #conteudo_especifico h1 {
     text-align: center;
     margin: 20px 0;
+    color: #1b88fc;
+    font-family:fonteBobEsponja;
+    font-size: 42px;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff42; /* cor da borda */
 }
 
 #conteudo_especifico p {
@@ -64,29 +74,22 @@ th, td {
     word-wrap: break-word; /* Quebra o texto longo */
 }
 
-/* Ajuste das colunas */
-th:nth-child(1), td:nth-child(1) {
-    width: 30%; /* Primeira coluna */
-}
 
-th:nth-child(2), td:nth-child(2) {
-    width: 70%; /* Segunda coluna */
-}
 
 /* Estilo do cabeçalho */
 th {
-    background-color:  #ffea00b7;
+    background-color:  #f3e67196;
     color: #46421f;
 }
 
 /* Estilo para as linhas pares */
 tr:nth-child(even) {
-    background-color: #5ef7ea98;
+    background-color: #36faeadc;
 }
 
 /* Estilo para as linhas ímpares */
 tr:nth-child(odd) {
-    background-color: #7cd0d4;
+    background-color: #7de6ecd2;
 }
 
 /* Efeito hover nas linhas */

@@ -15,9 +15,10 @@
 </head>
 <body>
     <header id="cabecalho">
-        <div id="topo">
+		<div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
+                <h1> GEEK GLASSES </h1>
             </div>
             <div id="menu_global"  class="menu_global">
 				<p align="right"> 
@@ -49,29 +50,12 @@
 			<p align="right"> <a href="cadastra_fun.php" class="btn">Cadastrar Funcionário</a> </p>
 			<table width="100%">
 				<tr>
-					<th>
-						<p> Nome </p>
-					</th>
-
-					<th>
-						<p> CPF </p>
-					</th>
-
-					<th>
-						<p> Telefone </p>
-					</th>
-
-					<th>
-						<p> Função </p>
-					</th>
-
-					<th>
-						<p> Status </p>
-					</th>
-
-					<th>
-						<p> Ação </p>
-					</th>
+					<th><p> Nome </p></th>
+					<th><p> CPF </p></th>
+					<th><p> Telefone </p></th>
+					<th><p> Função </p></th>
+					<th><p> Status </p></th>
+					<th><p> Ação </p></th>
 				</tr>
 				<?php		
 					while ($registro = mysqli_fetch_row($resultado_consulta)) 
@@ -79,44 +63,19 @@
 				?>						
 				<tr>
 					<td>
-						<p>
-							<a href="exibe_fun.php?codigo=<?php echo $registro[0]?>"> 
+						<p><a href="exibe_fun.php?codigo=<?php echo $registro[0]?>"> 
 								<?php echo "$registro[1]"; //Nome ?>
-							</a>
-						</p>
-					</td>
-
-					<td>
-						<p>									 
-							<?php echo "$registro[4]"; //CPF ?>
-						</p>
-					</td>
-
-					<td>
-						<p>									 
-							<?php echo "$registro[6]"; //Telefone ?>
-						</p>
-					</td>
-
-					<td>
-						<p>
-							<?php echo "$registro[9]"; //Função ?>
-						</p>
-					</td>
-
-					<td>
-						<p>
-							<?php echo "$registro[10]"; //Status ?>
-						</p>
-					</td>
-
-					<td>
-						<p>
+							</a></p>
+					</td> <!-- Nome -->
+					<td><p><?php echo "$registro[4]"; ?></p></td> <!-- CPF -->
+					<td><p><?php echo "$registro[6]"; ?></p></td> <!-- Telefone -->
+					<td><p><?php echo "$registro[9]"; ?></p></td> <!-- Função -->
+					<td><p><?php echo "$registro[10]"; ?></p></td> <!-- Status -->
+					<td><p>
 							<a href="altera_fun.php?codigo=<?php echo $registro[0]?>">
 								Alterar	
 							</a>
-						</p>
-					</td>
+						</p></td>
 				</tr>
 				<?php
 					}

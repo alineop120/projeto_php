@@ -18,6 +18,7 @@
         <div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
+                <h1> GEEK GLASSES </h1>
             </div>
             <div id="menu_global"  class="menu_global">
 				<p align="right"> 
@@ -37,6 +38,15 @@
                     tipo_lente_ocls, preco_ocls, vendas_id_ven
                             FROM oculos
                             WHERE fila_compra_ocls = 'N'";
+            /**
+             * $sql_consulta = "SELECT id_ocls, nome_ocls, marca_ocls, tipo_ocls, modelo_ocls 
+             *                 cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, 
+             *       tipo_lente_ocls, preco_ocls, vendas_id_ven
+             *               FROM oculos
+             *              WHERE fila_compra_ocls = 'N'
+             *                      OR
+             *                  fila_compra_ocls = 'V'";
+             */
 		    $resultado_consulta = mysqli_query ($conectar, $sql_consulta);
 		?>
 		<table width="100%">

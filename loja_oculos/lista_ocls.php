@@ -15,9 +15,10 @@
 </head>
 <body>
     <header id="cabecalho">
-        <div id="topo">
+		<div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
+                <h1> GEEK GLASSES </h1>
             </div>
             <div id="menu_global"  class="menu_global">
 				<p align="right"> 
@@ -48,36 +49,16 @@
 		<p align="right"> <a href="cadastra_ocls.php" class="btn"> Cadastrar óculos </a> </p>
 		<table width="100%">
 			<tr height="50px">
-                <th>
-					Nome
-				</th>
-                <th>
-					Marca
-				</th>
-                <th>
-					Tipo
-				</th>
-			    <th>
-					Modelo
-				</th>
-				<th>
-                    Cor da Armação
-                </th>
-                <th>
-                    Material da Armação
-                </th>
-                <th>
-                    Cor da Lente
-                </th>
-                <th>
-                    Tipo de Lente
-                </th>
-				<th>
-					Preço
-				</th>							
-				<th>
-					Ação
-				</th>
+                <th> Nome </th>
+                <th> Marca </th>
+                <th> Tipo </th>
+			    <th> Modelo </th>
+				<th> Cor da Armação </th>           
+				<th> Material da Armação </th>
+                <th> Cor da Lente </th>
+                <th> Tipo de Lente </th>
+				<th> Preço </th>							
+				<th> Ação </th>
 			</tr>
 			<?php		
 				while ($registro = mysqli_fetch_row($resultado_consulta))
@@ -85,36 +66,18 @@
 			?>						
 					<tr height="50px">
 						<td>
-							<?php echo $registro[1]; ?>
-						</td>
-						<td>
 							<a href="exibe_ocls.php?codigo=<?php echo $registro[0]?>"> 
-								<?php 
-									echo $registro[2];
-								?>
+								<?php echo $registro[1]; ?>
 							</a>
 						</td>
-						<td>
-							<?php echo $registro[3]; ?>							
-						</td>
-						<td>
-							<?php echo $registro[4]; ?>							
-						</td>
-						<td>
-							<?php echo $registro[5]; ?>							
-						</td>	
-						<td>
-							<?php echo $registro[6]; ?>							
-						</td>	
-						<td>
-							<?php echo $registro[7]; ?>							
-						</td>	
-						<td>
-							<?php echo $registro[8]; ?>							
-						</td>	
-						<td>
-							<?php echo $registro[9]; ?>							
-						</td>							
+						<td><?php echo $registro[2]; ?></td>
+						<td><?php echo $registro[3]; ?></td>
+						<td><?php echo $registro[4]; ?></td>
+						<td><?php echo $registro[5]; ?></td>	
+						<td><?php echo $registro[6]; ?></td>	
+						<td><?php echo $registro[7]; ?></td>	
+						<td><?php echo $registro[8]; ?></td>	
+						<td><?php echo $registro[9]; ?></td>							
 						<td>
 							<a href="altera_ocls.php?codigo=<?php echo $registro[0]?>">
 								Alterar	

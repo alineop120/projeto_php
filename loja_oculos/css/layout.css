@@ -1,4 +1,9 @@
 ﻿/* Estilos comuns a todas as páginas */
+@font-face {
+    font-family:'fonteBobEsponja';
+    src:url("Spongeboy\ Me\ Bob.ttf");
+}
+
 body {
     background-image: linear-gradient(rgba(0, 191, 255, 0.9), rgba(0, 191, 255, 0.2)), url('../img/background_layout.jpg');
     background-size: cover;          /* Cobre toda a área */
@@ -13,6 +18,7 @@ body {
 #cabecalho {    
     margin: 50px;
     font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 20px;
 }
 
 #topo {
@@ -22,7 +28,7 @@ body {
     margin: 0 auto 20px;    
     grid-gap: 10px;
     border-radius: 10px;    
-    background-color: rgba(255, 255, 0, 0.5);
+    background-color: rgba(255, 255, 0, 0.3);
     color: #333;
     justify-content: space-between;
     box-shadow: 0px 4px 8px rgba(255, 105, 180,0.2);
@@ -31,7 +37,7 @@ body {
 #logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 100px;
 }
 
 #logo img {
@@ -39,10 +45,17 @@ body {
     width: auto;
 }
 
+#logo h1 {
+    font-family:fonteBobEsponja;
+    color: #fff538;
+    font-size: 47px;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #00000042; /* cor da borda */
+}
+
 #descricao_pagina {
     width: 800px;
     margin: 20px auto;
-    padding: 20px;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -53,13 +66,19 @@ body {
 }
 
 #descricao_pagina h1 {
-    margin: 0;
-    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    color: #1b88fc;
+    font-family:fonteBobEsponja;
+    font-size: 40px;
+    -webkit-text-stroke-width: 1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff42; /* cor da borda */
 }
 
 #descricao_pagina p {
     margin: 0;
     color: #333;
+    font-size: 20px;
 }
 
 /* Estilo do rodapé */
@@ -78,6 +97,7 @@ body {
     margin: 0;               /* Remove margens para melhor controle */
     line-height: normal;
     text-align: center;      /* Centraliza o texto */
+    font-size: 16px;
 }
 
 /* Ajustes para dispositivos móveis */

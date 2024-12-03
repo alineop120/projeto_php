@@ -12,10 +12,11 @@
 
 <body>
     <header id="cabecalho">
-        <div id="topo">
+		<div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
-            </div>
+                <h1> GEEK GLASSES </h1>
+            </div>  
         </div>
     </header>
 

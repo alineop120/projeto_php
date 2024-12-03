@@ -17,6 +17,7 @@
         <div id="topo">
             <div id="logo">
                 <img src="img/bob_glasses.gif" alt="Logo da Loja">
+                <h1> GEEK GLASSES </h1>
             </div>
             <div id="menu_global"  class="menu_global">
 				<p align="right"> 
@@ -28,20 +29,21 @@
     </header>
 
     <main id="descricao_pagina">
-        <h1> ADMINISTRAÇÃO </h1>
+        <h1> ADMINISTRACAO </h1>
 		<p>
             Seja bem-vindo ao Sistema Subáquático do Controle, Estoque e Venda de Óculos da Loja Mais Incrível Desse Brasil!
         </p>
         <p>
             Prepare-se para uma experiência única! Aqui, a profundidade do nosso atendimento e a clareza dos nossos serviços vão te surpreender. Estamos prontos para garantir que você encontre os melhores óculos com a melhor gestão, tudo ao alcance de um clique! 🌊👓
 		</p>
+        <img src="img/bob_esponja_e_patrick.gif" alt="imagem">
     </main>
 
     <footer id="rodape">
 			<div id="texto_institucional">
 				<div id="texto_institucional">
 					<h6>GEEK GLASSES - CONTROL</h6>
-					<h6>Rua do Rock, 666</h6>
+					<h6>Fenda do Biquíni, Bairro Abacaxi</h6>
 					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
 					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
 				</div> 
