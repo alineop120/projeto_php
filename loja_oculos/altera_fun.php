@@ -41,7 +41,7 @@
 					
 			$registro = mysqli_fetch_row($resultado_pesquisa);
 		?>
-		<form method="post" action="processa_altera_fun.php">
+		<form id="formulario" method="post" action="processa_altera_fun.php">
 			<fieldset>
 				<legend>Alterar Óculos</legend>
 				<input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
@@ -50,24 +50,37 @@
 					if ($registro[10] <> "administrador") 
 					{
 				?>
-						<label> Nome: </label> 
-						<input type="text" name="nome" value="<?php echo "$registro[0]";?>" required>
-
-						<label> Nacionalidade: </label> 
-						<input type="text" name="nacionalidade" value="<?php echo "$registro[1]";?>" required>
-
-						<label> Naturalidade: </label> 
-						<input type="text" name="naturalidade" value="<?php echo "$registro[2]";?>" required>
-
-						<label> CPF: </label> 
-						<input type="text" name="cpf" value="<?php echo "$registro[3]";?>" required>
-
-						<label> RG: </label> 
-						<input type="text" name="rg" value="<?php echo "$registro[4]";?>" required>
-
-						<label> Telefone: </label> 
-						<input type="text" name="telefone" value="<?php echo "$registro[5]";?>" required>
-
+						<div class="campo">
+							<label> Nome: </label> 
+							<input type="text" name="nome" value="<?php echo "$registro[0]";?>" required>
+						</div>
+						
+						<div class="campo">
+							<label> Nacionalidade: </label> 
+							<input type="text" name="nacionalidade" value="<?php echo "$registro[1]";?>" required>
+						</div>
+						
+						<div class="campo">
+							<label> Naturalidade: </label> 
+							<input type="text" name="naturalidade" value="<?php echo "$registro[2]";?>" required>
+						</div>
+						
+						<div class="campo">
+							<label> CPF: </label> 
+							<input type="text" name="cpf" value="<?php echo "$registro[3]";?>" required>
+						</div>
+						
+						<div class="campo">
+							<label> RG: </label> 
+							<input type="text" name="rg" value="<?php echo "$registro[4]";?>" required>
+						</div>
+						
+						<div class="campo">
+							<label> Telefone: </label> 
+							<input type="text" name="telefone" value="<?php echo "$registro[5]";?>" required>
+						</div>
+						
+						<!-- continuar ..... -->
 						<label> Data de Registro: </label> 
 						<input type="text" name="data-registro" value="<?php echo "$registro[6]";?>" required>
 

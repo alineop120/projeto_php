@@ -80,4 +80,57 @@ body {
     text-align: center;      /* Centraliza o texto */
 }
 
+/* Ajustes para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    /* Ajusta o layout do topo */
+    #topo {
+        grid-template-columns: 1fr; /* Muda de 2 colunas para 1 coluna */
+        text-align: center;
+    }
 
+    /* Ajusta o cabeçalho */
+    #cabecalho {
+        margin: 20px; /* Diminui a margem para telas menores */
+    }
+
+    /* Ajusta a largura do conteúdo da página */
+    #descricao_pagina {
+        width: 95%; /* Diminui a largura para ocupar 95% da tela */
+        margin: 20px auto;
+    }
+
+    /* Ajustes no rodapé */
+    #rodape {
+        flex-direction: column; /* Coloca os itens do rodapé em coluna */
+        gap: 10px; /* Reduz o espaço entre os itens */
+    }
+
+    #rodape h6 {
+        text-align: center; /* Garante que o texto do rodapé fique centralizado */
+    }
+
+    /* Ajusta o tamanho das imagens no logo */
+    #logo img {
+        max-height: 80px; /* Reduz o tamanho das imagens do logo */
+    }
+}
+
+/* Ajustes para telas muito pequenas (celulares) */
+@media screen and (max-width: 450px) {
+    body {
+        background-size: contain; /* Ajusta o fundo para caber melhor na tela */
+    }
+
+    #topo {
+        padding: 5px; /* Reduz o padding no topo */
+    }
+
+    #descricao_pagina {
+        width: 100%; /* Deixa o conteúdo ocupar toda a largura */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    #rodape h6 {
+        font-size: 14px; /* Diminui o tamanho da fonte no rodapé */
+    }
+}

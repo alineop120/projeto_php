@@ -6,6 +6,8 @@ session_start();
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/layout.css">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <link rel="stylesheet" type="text/css" href="css/form.css">
@@ -40,7 +42,7 @@ session_start();
 
             $registro = mysqli_fetch_row($resultado_pesquisa);
         ?>
-        <form method="post" action="processa_altera_ocls.php">
+        <form id="formulario" method="post" action="processa_altera_ocls.php">
             <fieldset>
                 <legend>Alterar Óculos</legend>
                 <input type="hidden" name="codigo" value="<?php echo "$cod"; ?>">
@@ -292,7 +294,7 @@ session_start();
                 <label>Foto:</label>
                 <input type="file" name="foto">
                 
-                <input type="submit" value="Atualizar Óculos">
+                <input type="submit" name ="btn" value="Atualizar Óculos">
         </form>
     </main>
 

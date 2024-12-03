@@ -50,15 +50,17 @@
 
 				$registro = mysqli_fetch_row($resultado_pesquisa);
 
-				echo "<p> <b>Nome:</b> $registro[0] </p>";
-                echo "<p> <b>Marca:</b> $registro[1] </p>";
-                echo "<p> <b>Tipo de óculos:</b> $registro[2] </p>";
-				echo "<p> <b>Modelo:</b> $registro[3] </p>";
-				echo "<p> <b>Cor da Armação:</b> $registro[4] </p>";
-				echo "<p> <b>Material da Armação:</b> $registro[5] </p>";
-                echo "<p> <b>Cor da Lente:</b> $registro[6] </p>";
-                echo "<p> <b>Tipo da Lente:</b> $registro[7] </p>";
-                echo "<p> <b>Preço:</b> $registro[8] </p>";
+				echo "<table class='tabela-dados'>";
+				echo "<tr><td><b>Nome:</b></td><td>$registro[0]</td></tr>";
+				echo "<tr><td><b>Marca:</b></td><td>$registro[1]</td></tr>";
+				echo "<tr><td><b>Tipo de óculos:</b></td><td>$registro[2]</td></tr>";
+				echo "<tr><td><b>Modelo:</b></td><td>$registro[3]</td></tr>";
+				echo "<tr><td><b>Cor da Armação:</b></td><td>$registro[4]</td></tr>";
+				echo "<tr><td><b>Material da Armação:</b></td><td>$registro[5]</td></tr>";
+				echo "<tr><td><b>Cor da Lente:</b></td><td>$registro[6]</td></tr>";
+				echo "<tr><td><b>Tipo da Lente:</b></td><td>$registro[7]</td></tr>";
+				echo "<tr><td><b>Preço:</b></td><td>$registro[8]</td></tr>";
+				echo "</table>";
 			?>
     </main>
 

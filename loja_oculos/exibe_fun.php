@@ -53,18 +53,21 @@
 
 				$registro = mysqli_fetch_row($resultado_pesquisa);
 
-				echo "<p> <b>Nome:</b> $registro[0] </p>";
-                echo "<p> <b>Nascionalidade:</b> $registro[1] </p>";
-                echo "<p> <b>Natualidade:</b> $registro[2] </p>";
-				echo "<p> <b>CPF:</b> $registro[3] </p>";
-				echo "<p> <b>RG:</b> $registro[4] </p>";
-				echo "<p> <b>Telefone:</b> $registro[5] </p>";
-                echo "<p> <b>Data do Registro:</b> $registro[6] </p>";
-                echo "<p> <b>Endereço:</b> $registro[7] </p>";
-                echo "<p> <b>Login:</b> $registro[8] </p>";
-                echo "<p> <b>Senha:</b> $registro[9] </p>";
-                echo "<p> <b>Função:</b> $registro[10] </p>";
-                echo "<p> <b>Status:</b> $registro[11] </p>";
+				echo "<table>";
+				echo "<tr><td><b>Nome:</b></td><td>$registro[0]</td></tr>";
+				echo "<tr><td><b>Naturalidade:</b></td><td>$registro[1]</td></tr>";
+				echo "<tr><td><b>Naturalidade:</b></td><td>$registro[2]</td></tr>";
+				echo "<tr><td><b>CPF:</b></td><td>$registro[3]</td></tr>";
+				echo "<tr><td><b>RG:</b></td><td>$registro[4]</td></tr>";
+				echo "<tr><td><b>Telefone:</b></td><td>$registro[5]</td></tr>";
+				echo "<tr><td><b>Data do Registro:</b></td><td>$registro[6]</td></tr>";
+				echo "<tr><td><b>Endereço:</b></td><td>$registro[7]</td></tr>";
+				echo "<tr><td><b>Login:</b></td><td>$registro[8]</td></tr>";
+				echo "<tr><td><b>Senha:</b></td><td>$registro[9]</td></tr>";
+				echo "<tr><td><b>Função:</b></td><td>$registro[10]</td></tr>";
+				echo "<tr><td><b>Status:</b></td><td>$registro[11]</td></tr>";
+				echo "</table>";
+
 			?>
     </main>
 

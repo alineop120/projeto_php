@@ -28,7 +28,7 @@
         </div>
     </header>
     <main id="conteudo_especifico">
-        <form id="formulario">
+        <form id="formulario" method="post" action="processa_cadastra_fun.php">
             <fieldset>
                 <legend>CADASTRO DE FUNCIONÁRIOS</legend>
                 

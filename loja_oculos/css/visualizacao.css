@@ -1,7 +1,8 @@
-/* Estilos específicos para a página de visualização */
+/* Estilos comuns */
 #conteudo_especifico {
     position: relative;
-    width: 1200px;
+    width: 90%;  /* Largura relativa para se ajustar em diferentes tamanhos */
+    max-width: 1200px;  /* Limita a largura máxima */
     margin: 2em auto;
     text-align: center;
     font-size: 18px;
@@ -36,40 +37,101 @@
 
 .btn {
     display: inline-block; /* Faz o link se comportar como um botão */
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    background-color: #007BFF; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    text-align: center; /* Centraliza o texto */
-    text-decoration: none; /* Remove o sublinhado do link */
-    border-radius: 5px; /* Bordas arredondadas */
-    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    padding: 10px 20px;
+    background-color: #1b88fc;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    background-color: #0056b3;
 }
 
-/*Design da tabela*/
 table {
     width: 100%;
-    border-collapse: collapse; /* Remove espaços entre as bordas */
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza a tabela */
+    border-collapse: collapse;
 }
 
 th, td {
-    border: 2px solid yellow; /* Borda amarela para as células */
-    padding: 10px; /* Espaçamento interno nas células */
-    text-align: center; /* Alinhamento do texto à esquerda */
+    border: 2px solid rgba(0, 123, 255, 0.3);
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; /* Quebra o texto longo */
 }
 
+/* Ajuste das colunas */
+th:nth-child(1), td:nth-child(1) {
+    width: 30%; /* Primeira coluna */
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 70%; /* Segunda coluna */
+}
+
+/* Estilo do cabeçalho */
 th {
-    background-color: #FFD700; /* Cor de fundo amarela para o cabeçalho */
-    color: black; /* Cor do texto do cabeçalho */
+    background-color:  #ffea00b7;
+    color: #46421f;
 }
 
+/* Estilo para as linhas pares */
 tr:nth-child(even) {
-    background-color: #f2f2f2; /* Cor de fundo alternada para linhas pares */
+    background-color: #5ef7ea98;
 }
 
+/* Estilo para as linhas ímpares */
+tr:nth-child(odd) {
+    background-color: #7cd0d4;
+}
+
+/* Efeito hover nas linhas */
 tr:hover {
-    background-color: #ffeb3b; /* Cor de fundo ao passar o mouse */
-} 
+    background-color: rgba(211, 163, 255, 0.767);
+}
+
+/* Para telas grandes */
+@media screen and (min-width: 1024px) {
+    #conteudo_especifico {
+        font-size: 20px;  /* Aumenta o tamanho da fonte em telas grandes */
+        width: 80%;  /* Deixa a largura mais restrita */
+    }
+
+    .card-oculos {
+        width: 30%;  /* Para telas grandes, exibe os cards em 3 colunas */
+        display: inline-block;
+    }
+
+    table {
+        width: 100%;  /* Ajusta a largura da tabela em telas grandes */
+    }
+
+    .imagem-oculos {
+        width: 250px;  /* Aumenta o tamanho das imagens em telas grandes */
+    }
+}
+
+/* Para telas pequenas */
+@media screen and (max-width: 640px) {
+    #conteudo_especifico {
+        font-size: 16px;  /* Reduz o tamanho da fonte em telas pequenas */
+        width: 95%;  /* Ajusta a largura para ocupar mais espaço */
+    }
+
+    .card-oculos {
+        width: 100%;  /* Exibe os cards em uma coluna para telas pequenas */
+        display: block;
+    }
+
+    table {
+        width: 100%;  /* A tabela ocupa toda a largura disponível */
+    }
+
+    .imagem-oculos {
+        width: 150px;  /* Reduz o tamanho das imagens em telas pequenas */
+    }
+}

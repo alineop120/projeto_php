@@ -28,13 +28,26 @@
         </div>
     </header>
     <main id="conteudo_especifico">
-        <h1> RELATÓRIOS </h1>
-			<ul type="none">
-                <li><a href="rel_funcionarios_ativos.php" class="btn">Relatório de Funcionários Ativos</a></li>
-                <li><a href="rel_funcionarios_inativos.php" class="btn">Relatório de Funcionários Inativos</a></li>
-				<li><a href="rel_estoque.php" class="btn">Relatório de óculos em estoque</a></li>
-				<li><a href="rel_total_vendas.php" class="btn">Faturamento total do mês</a></li>				
-			</ul>
+        <h1> RELATÓRIO DE TOTAL DE VENDAS </h1>
+		<?php
+			$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");			
+					
+			$data = date ('d/m/Y');
+					
+			$sql_consulta_total_vendas = "SELECT preco_ocls
+                                            FROM oculos
+                                            WHERE fila_compra_ocls = 'V'";
+					
+		    $resultado_consulta = mysqli_query ($conectar, $sql_consulta_total_vendas);		
+					
+			$valor_total = 0;
+			while ($registro_total_vendas = mysqli_fetch_row ($resultado_consulta))
+			{
+				$valor_total = $valor_total + $registro_total_vendas[0];
+			}
+		?>
+		<p> Total de vendas até a presente data: <?php echo $valor_total; ?>
+		<p> <a href="relatorios.php"> Voltar </a> </p>
     </main>
 
     <footer id="rodape">

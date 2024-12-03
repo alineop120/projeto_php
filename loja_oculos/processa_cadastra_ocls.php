@@ -16,7 +16,7 @@
     
     // Caminho da imagem
     $foto_nome = "img/".$foto["name"];
-    move_uploaded_file($foto["tmp_name"], $foto_nome);
+	move_uploaded_file($foto["tmp_name"], $foto_nome);
 
     // Inserir na tabela oculos
     $sql_cadastrar = "INSERT INTO oculos (nome_ocls, marca_ocls, tipo_ocls, modelo_ocls, cor_armacao_ocls, material_armacao_ocls, cor_lente_ocls, tipo_lente_ocls, preco_ocls, imagem_ocls) 

@@ -98,18 +98,6 @@
                 
                 <label>Foto:</label>
                 <input type="file" name="foto" required>
-                
-                <div class="preview-area">
-                    <img id="previewImage" src="img/oculos-exemplo.png" alt="Exemplo de Óculos">
-                    <p>Área de visualização do óculos</p>
-                </div>
-
-                <script>
-                    function updateImagePreview(fileName) {
-                        const imgElement = document.getElementById('previewImage');
-                        imgElement.src = 'img/' + fileName;
-                    }
-                </script>
 
                 <input type="submit" value="Cadastrar Óculos">
             </fieldset>
