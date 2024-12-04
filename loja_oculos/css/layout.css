@@ -1,7 +1,7 @@
 ﻿/* Estilos comuns a todas as páginas */
 @font-face {
     font-family:'fonteBobEsponja';
-    src:url("Spongeboy\ Me\ Bob.ttf");
+    src:url("./fonts/Spongeboy\ Me\ Bob.ttf");
 }
 
 body {
@@ -68,7 +68,7 @@ body {
 #descricao_pagina h1 {
     text-align: center;
     margin: 20px 0;
-    color: #1b88fc;
+    color: rgb(253, 159, 206);
     font-family:fonteBobEsponja;
     font-size: 40px;
     -webkit-text-stroke-width: 1px; /* largura da borda */

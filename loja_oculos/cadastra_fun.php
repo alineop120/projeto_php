@@ -86,9 +86,14 @@
                 <div class="campo">
                     <label> Função: </label>
                     <p>
-                        <input type="radio" name="funcao" value="estoquista" checked> Estoquista
-                        <input type="radio" name="funcao" value="vendedor"> Vendedor
-                        <input type="radio" name="funcao" value="financeiro"> Financeiro
+                        <input type="radio" id="estoquista" name="funcao" value="estoquista" checked>
+                        <label for="estoquista">Estoquista</label>
+
+                        <input type="radio" id="vendedor" name="funcao" value="vendedor">
+                        <label for="vendedor">Vendedor</label>
+
+                        <input type="radio" id="financeiro" name="funcao" value="financeiro">
+                        <label for="financeiro">Financeiro</label>
                     </p>
                 </div>
 

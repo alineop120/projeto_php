@@ -1,4 +1,9 @@
 /* Estilos comuns */
+@font-face {
+    font-family:'fonteBobEsponja';
+    src:url("./fonts/Spongeboy\ Me\ Bob.ttf");
+}
+
 #conteudo_especifico {
     position: relative;
     width: 90%;  /* Largura relativa para se ajustar em diferentes tamanhos */
@@ -8,15 +13,10 @@
     font-size: 18px;
 }
 
-@font-face {
-    font-family:'fonteBobEsponja';
-    src:url("Spongeboy\ Me\ Bob.ttf");
-}
-
 #conteudo_especifico h1 {
     text-align: center;
     margin: 20px 0;
-    color: #1b88fc;
+    color: rgba(255, 105, 180, 1);
     font-family:fonteBobEsponja;
     font-size: 42px;
     -webkit-text-stroke-width: 1px; /* largura da borda */
@@ -25,6 +25,13 @@
 
 #conteudo_especifico p {
     font-size: 18px;
+}
+
+.conteudo {
+    display: flex; /* Ativa o layout flexível */
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    gap: 20px; /* Espaçamento entre lista e imagem */
 }
 
 .card-oculos {
@@ -48,7 +55,7 @@
 .btn {
     display: inline-block; /* Faz o link se comportar como um botão */
     padding: 10px 20px;
-    background-color: #1b88fc;
+    background-color: rgb(153, 102, 204, 1);
     color: white;
     text-align: center;
     text-decoration: none;
@@ -57,8 +64,38 @@
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: rgb(109, 72, 146);
 }
+
+.lista-relatorios {
+    padding: 0; /* Remove padding padrão da lista */
+    margin: 0; /* Remove margens padrão da lista */
+}
+
+.lista-relatorios li {
+    margin-bottom: 20px; /* Espaço entre os botões */
+}
+
+.btn-relat {
+    display: inline-block; /* Para comportamento de botão */
+    padding: 10px 20px; /* Ajusta o tamanho interno */
+    background-color: rgb(153, 102, 204, 1); /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Animação suave */
+}
+
+.btn-relat:hover {
+    background-color:  rgb(109, 72, 146); /* Cor de fundo ao passar o mouse */
+}
+
+.imagem-lateral {
+    max-width: 450px; /* Limita o tamanho da imagem */
+    height: auto; /* Mantém a proporção */
+    align-self: center; /* Alinha a imagem ao centro da altura do flexbox */
+}
+
 
 table {
     width: 100%;
@@ -73,7 +110,6 @@ th, td {
     text-align: center;
     word-wrap: break-word; /* Quebra o texto longo */
 }
-
 
 
 /* Estilo do cabeçalho */

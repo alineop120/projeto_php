@@ -29,13 +29,16 @@
         </div>
     </header>
     <main id="conteudo_especifico">
-        <h1> RELATÓRIOS </h1>
-			<ul type="none">
-                <li><a href="rel_funcionarios_ativos.php" class="btn">Relatório de Funcionários Ativos</a></li>
-                <li><a href="rel_funcionarios_inativos.php" class="btn">Relatório de Funcionários Inativos</a></li>
-				<li><a href="rel_estoque.php" class="btn">Relatório de óculos em estoque</a></li>
-				<li><a href="rel_total_vendas.php" class="btn">Faturamento total do mês</a></li>				
+        <h1> RELATORIOS </h1>
+        <div class="conteudo">
+            <img src="img/bob_lapis.gif" alt="bob com lapis" class="imagem-lateral">
+            <ul type="none" class="lista-relatorios">
+                <li><a href="rel_funcionarios_ativos.php" class="btn-relat">Relatório de Funcionários Ativos</a></li>
+                <li><a href="rel_funcionarios_inativos.php" class="btn-relat">Relatório de Funcionários Inativos</a></li>
+				<li><a href="rel_estoque.php" class="btn-relat">Relatório de óculos em estoque</a></li>
+				<li><a href="rel_total_vendas.php" class="btn-relat">Faturamento total do mês</a></li>				
 			</ul>
+        </div>
     </main>
 
     <footer id="rodape">
