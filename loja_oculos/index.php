@@ -24,11 +24,15 @@
 		<form id="formulario" method="post" action="processa_login.php">
 			<fieldset>
 				<legend> ACESSO À ÁREA RESTRITA </legend>
-				<label for="login">Login:</label>
-				<input type="text" id="login" name="login" placeholder="Digite seu login" required>
+				<div class="campo">
+					<label for="login">Login:</label>
+					<input type="text" id="login" name="login" placeholder="Digite seu login" required>
+				</div>
 
-				<label for="senha">Senha:</label>
-				<input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+				<div class="campo">
+					<label for="senha">Senha:</label>
+					<input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+				</div>
 
 				<input type="submit" value="Entrar">
 			</fieldset>
@@ -39,9 +43,9 @@
 			<div id="texto_institucional">
 				<div id="texto_institucional">
 					<h6>GEEK GLASSES - CONTROL</h6>
-					<h6>Rua do Rock, 987</h6>
+					<h6>Fenda do Biquíni, Bairro Abacaxi</h6>
 					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
-					<h6>Fone: <a href="tel:+5561996666677">(61) 2646 - 9444 </a></h6> 
+					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
 				</div> 
 			</div>
     </footer>

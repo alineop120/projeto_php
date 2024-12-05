@@ -64,7 +64,7 @@
 				<tr>
 					<td>
 						<p><a href="exibe_fun.php?codigo=<?php echo $registro[0]?>"> 
-								<?php echo "$registro[1]"; //Nome ?>
+								<?php echo "$registro[1]"; ?>
 							</a></p>
 					</td> <!-- Nome -->
 					<td><p><?php echo "$registro[4]"; ?></p></td> <!-- CPF -->
@@ -87,7 +87,7 @@
 			<div id="texto_institucional">
 				<div id="texto_institucional">
 					<h6>GEEK GLASSES - CONTROL</h6>
-					<h6>Rua do Rock, 666</h6>
+					<h6>Fenda do Biquíni, Bairro Abacaxi</h6>
 					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
 					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
 				</div> 

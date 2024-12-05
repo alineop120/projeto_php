@@ -81,56 +81,74 @@
 							<input type="text" name="telefone" value="<?php echo "$registro[5]";?>" required>
 						</div>
 						
-						<!-- continuar ..... -->
-						<label> Data de Registro: </label> 
-						<input type="text" name="data-registro" value="<?php echo "$registro[6]";?>" required>
+						<div class="campo">
+							<label> Data de Registro: </label> 
+							<input type="text" name="data-registro" value="<?php echo "$registro[6]";?>" required>
+						</div>
 
-						<label> Endereço: </label> 
-						<input type="text" name="endereco" value="<?php echo "$registro[7]";?>" required>
+						<div class="campo">
+							<label> Endereço: </label> 
+							<input type="text" name="endereco" value="<?php echo "$registro[7]";?>" required>
+						</div>
 						
-						<label> Login: </label>
-						<input type="text" name="login" value="<?php echo "$registro[8]";?>" required>
-						
-						<label> Senha: </label>
-						<input type="password" name="senha" value="<?php echo "$registro[9]";?>" required>
+						<div class="campo">
+							<label> Login: </label>
+							<input type="text" name="login" value="<?php echo "$registro[8]";?>" required>
+						</div>
 
-						<Label> Função: </Label>							
-						<input type="radio" name="funcao" value="estoquista" 
-							<?php
-								if ($registro[10] == "estoquista") {
-									echo "checked";
-								}
-							?>> Estoquista
-						<input type="radio" name="funcao" value="vendedor"
-							<?php
-								if ($registro[10] == "vendedor") {
-									echo "checked";
-								}
-							?>> Vendedor
-						<input type="radio" name="funcao" value="financeiro"
-							<?php
-								if ($registro[10] == "financeiro") {
-									echo "checked";
-								}
-							?>> Financeiro
+						<div class="campo">
+							<label> Senha: </label>
+							<input type="password" name="senha" value="<?php echo "$registro[9]";?>" required>
+						</div>
+
+						<div class="campo">
+							<Label> Função: </Label>	
+							<p>
+								<input type="radio" id="estoquista" name="funcao" value="estoquista" 
+									<?php
+										if ($registro[10] == "estoquista") {
+											echo "checked";
+										}
+									?>> 
+								<label for="estoquista">Estoquista</label>
+
+								<input type="radio" id="vendedor" name="funcao" value="vendedor"
+									<?php
+										if ($registro[10] == "vendedor") {
+											echo "checked";
+										}
+									?>> 
+								<label for="vendedor">Vendedor</label>
+
+								<input type="radio" id="financeiro" name="funcao" value="financeiro"
+									<?php
+										if ($registro[10] == "financeiro") {
+											echo "checked";
+										}
+									?>> 
+								<label for="financeiro">Financeiro</label>
+							</p>						
+							
+						</div>
 						
-						<label> Status: </label>
-						<select name="status">
-							<option value="ativo"
-								<?php
-									if ($registro[11] == "ativo") {
+						<div class="campo">
+							<label> Status: </label>
+							<select name="status">
+								<option value="ativo"
+									<?php
+										if ($registro[11] == "ativo") {
+											echo "selected";
+										}
+									?> > Ativo 
+								</option>
+								<option value="inativo"<?php
+									if ($registro[11] == "inativo") {
 										echo "selected";
 									}
-								?> > Ativo 
-							</option>
-							<option value="inativo"<?php
-								if ($registro[11] == "inativo") {
-									echo "selected";
-								}
-								?> > Inativo 
-							</option>
-						</select>
-						
+									?> > Inativo 
+								</option>
+							</select>
+						</div>
 						<input type="submit" value="Alterar Funcionário">
 				<?php
 					}
@@ -157,7 +175,7 @@
 			<div id="texto_institucional">
 				<div id="texto_institucional">
 					<h6>GEEK GLASSES - CONTROL</h6>
-					<h6>Rua do Rock, 666</h6>
+					<h6>Fenda do Biquíni, Bairro Abacaxi</h6>
 					<h6>E-mail: <a href="mailto:contato@geekglasses_control.com.br">contato@geekglasses_control.com.br</a></h6>
 					<h6>Fone: <a href="tel:+5561996666677">(61) 9966 - 6677</a></h6> 
 				</div> 

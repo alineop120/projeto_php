@@ -1,7 +1,6 @@
 <?php
 	$conectar = mysqli_connect ("localhost", "root", "", "db_loja_oculos");
 	
-//2.	Receber o nome, a fun��o, login e senha	
 	$nome = $_POST["nome"];
     $naturalidade = $_POST['naturalidade'];
     $nacionalidade = $_POST['nascionalidade'];
@@ -14,7 +13,6 @@
 	$senha = $_POST["senha"];
 	$funcao = $_POST["funcao"];
 
-//3.	Pesquisar no banco de dados se j� existe o login que foi recebido acima
 	$sql_consulta = "SELECT login_fun FROM funcionarios 
 					WHERE login_fun = '$login'";
 
@@ -32,7 +30,7 @@
 					location.href = ('cadastra_fun.php') 
 			</script>";			
 	}
-	else { //Para o usuario que n�o existe	
+	else { 
 		$sql_cadastrar = "INSERT INTO funcionarios (nome_fun, naturalidade_fun, nacionalidade_fun, cpf_fun, rg_fun, telefone_fun, data_fun, endereco_fun, login_fun, senha_fun, funcao_fun) 
                         VALUES 
                                 ('$nome', '$naturalidade', '$nacionalidade', '$cpf', '$rg', '$telefone', '$data_registro', '$endereco',	'$login', '$senha', '$funcao')";
