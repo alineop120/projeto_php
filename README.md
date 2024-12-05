@@ -1,106 +1,88 @@
-# Sistema de Controle de Estoque e Vendas de Óculos
-
-Este sistema tem como objetivo gerenciar o estoque e as vendas de óculos em uma loja, permitindo o cadastro de produtos e funcionários, o registro de vendas e a geração de relatórios gerenciais.
+# Sistema de Controle de Estoque e Vendas de Óculos - Geek Glasses
 
 ## 1. Objetivos do Sistema
 
 ### 1.1 Objetivo Principal
-O objetivo principal do sistema é o controle de estoque e vendas de óculos, identificando as funcionalidades essenciais e os dados que serão gerados, armazenados e processados. O sistema deve permitir o cadastro eficiente de produtos e funcionários, o registro detalhado de transações de vendas, e a geração de relatórios sobre o desempenho de vendas, status de estoque e as finanças da loja, facilitando a tomada de decisões estratégicas.
+- O objetivo principal do sistema é realizar o controle de estoque e vendas de óculos, identificando as funcionalidades essenciais e os dados necessários para gerenciar de forma eficiente as operações da loja. Ele permitirá o cadastro de produtos e funcionários, o registro de vendas e a geração de relatórios que facilitarão a análise e a tomada de decisões estratégicas.
 
 ### 1.2 Objetivos Específicos
+Cadastro de Funcionários:
+- Gerenciar dados completos de funcionários, incluindo permissões de acesso de acordo com o perfil (administrador, vendedor, estoquista e financeiro).
 
-- **1.2.1 Cadastro de Funcionários**: O sistema permitirá o cadastro de funcionários, com diferentes permissões e dados como nome, CPF, função e status. Isso gerará informações sobre o quadro de funcionários e suas permissões no sistema.
-  
-- **1.2.2 Cadastro de Óculos**: O sistema permitirá cadastrar óculos, gerando dados como nome, marca, preço e quantidade em estoque.
-  
-- **1.2.3 Registro de Vendas**: O sistema registrará as transações de vendas, criando registros de vendas realizadas com dados sobre o vendedor, cliente (se aplicável), produto, quantidade e valores.
-  
-- **1.2.4 Emissão de Relatórios**: O sistema gerará relatórios como vendas totais, vendas por produto, vendas por funcionário e status do estoque (produtos em baixa, por exemplo).
+Cadastro de Óculos:
+- Registrar informações detalhadas dos produtos disponíveis, como marca, modelo, tipo de lente e preço.
 
----
+Registro de Vendas:
+- Armazenar dados de transações realizadas, incluindo produtos vendidos, vendedor responsável e total da venda.
+
+Emissão de Relatórios:
+- Gerar relatórios analíticos sobre estoque, vendas e desempenho dos funcionários.
 
 ## 2. Dados Mantidos no Sistema
 
 ### 2.1 Cadastro de Funcionários
-Os dados mantidos para o cadastro de funcionários incluem:
-
-- **Nome completo**
-- **CPF**
-- **Carteira de Trabalho**
-- **Telefone**
-- **Data de Registro**
-- **Endereço**
-- **Login**
-- **Senha**
-- **Função do funcionário**
-- **Status** (ativo/inativo)
+Os dados registrados para funcionários incluem:
+- Nome completo
+- Nacionalidade e naturalidade
+- CPF e RG
+- Telefone
+- Data de registro
+- Endereço
+- Login e senha
+- Função do funcionário
 
 ### 2.2 Cadastro de Óculos
-Os dados mantidos para o cadastro de óculos incluem:
-
-- **Marca**
-- **Modelo/Nome do produto**
-- **Cor**
-- **Material**
-- **Preço**
-- **Categoria** (ex: óculos de sol, óculos de grau)
-- **Imagem do produto**
+Os dados registrados para os óculos incluem:
+- Nome, marca e modelo do produto
+- Tipo de óculos (grau, leitura, sol, etc.)
+- Cor da armação e material
+- Cor e tipo da lente
+- Preço
+- Imagem do produto
 
 ### 2.3 Registro de Vendas
 Os dados registrados para cada venda incluem:
-
-- **Data da venda**
-- **Forma de pagamento** (cartão de crédito, débito, dinheiro)
-- **Status da venda** (concluída, pendente, cancelada)
-- **Descontos aplicados** (se houver)
-
----
+- Data da venda
+- Produtos vendidos (nome e quantidade)
+- Funcionário responsável pela venda
+- Total da venda
 
 ## 3. Fluxo de Trabalho
-O fluxo de trabalho descreve o processo de venda dentro da loja:
-
-1. O cliente escolhe os óculos que deseja comprar.
-2. Os óculos escolhidos são separados até a finalização da compra.
-3. O **vendedor** registra a venda no sistema, incluindo o produto, a quantidade e a forma de pagamento.
-4. O sistema atualiza automaticamente o estoque e registra o vendedor responsável pela venda.
-5. O sistema gera relatórios financeiros, se necessário.
-
----
+- O estoquista cadastra os óculos no sistema, com informações completas sobre os produtos.
+- O vendedor registra a venda no sistema, inserindo os dados do produto, quantidade e o total da venda.
+- O sistema atualiza automaticamente o estoque, reduzindo a quantidade dos itens vendidos.
+- O sistema gera relatórios que incluem:
+- Faturamento mensal.
+- Funcionários ativos e inativos.
+- Produtos que estão no estoque.
 
 ## 4. Funcionamento do Sistema
 
 ### 4.1 Acesso ao Sistema
-O acesso ao sistema será feito por **login e senha**, com diferentes níveis de permissão, de acordo com o perfil do usuário:
-
-- **Administrador**: Acesso total a todas as funcionalidades do sistema.
-- **Vendedor**: Acesso ao módulo de vendas, sem permissão para editar produtos ou visualizar relatórios financeiros.
-- **Estoquista**: Acesso ao módulo de gerenciamento de estoque, sem acesso ao módulo de vendas ou relatórios financeiros.
-- **Financeiro**: Acesso aos relatórios financeiros e controle de fluxo de caixa, sem acesso ao gerenciamento de produtos ou funcionários.
+O sistema possui níveis de acesso conforme o perfil do usuário:
+- Administrador: Acesso total a todas as funcionalidades.
+- Vendedor: Acesso apenas ao módulo de vendas.
+- Estoquista: Acesso ao módulo de gerenciamento de estoque.
+- Financeiro: Acesso exclusivo aos relatórios financeiros.
 
 ### 4.2 Módulo de Funcionários
-- Cadastro de novos **funcionários**.
-- Gerenciamento de dados dos **funcionários** (alterações de informações, status, etc.).
-- Alteração das **permissões de acesso** conforme o perfil do usuário (vendedor, administrador, etc.).
+- Cadastro de novos funcionários.
+- Atualização de informações e alteração de status.
+- Definição de permissões de acesso.
 
 ### 4.3 Módulo de Produtos
-- Cadastro e **gestão de produtos** (óculos) disponíveis para venda.
-- Informações detalhadas sobre cada item, como **preço**, **quantidade em estoque**, **marca** e **categoria**.
-- Atualização do **estoque** à medida que as vendas são realizadas.
+- Cadastro e atualização de produtos no estoque.
+- Controle de informações detalhadas dos óculos.
 
 ### 4.4 Módulo de Vendas
-- Registro de todas as **transações de venda** realizadas.
-- Geração de dados detalhados sobre a venda, incluindo **produto(s)** vendido(s), **quantidade**, **valor total** e **vendedor** responsável.
-- Atualização do **estoque** conforme as vendas são realizadas.
+- Registro de transações, incluindo produtos vendidos e vendedor responsável.
+- Atualização automática do estoque com base nas vendas.
 
 ### 4.5 Módulo de Relatórios
-O módulo de relatórios permitirá a geração dos seguintes relatórios:
-
-- **Vendas realizadas** (total, por produto, por vendedor, etc.).
-- **Produtos em estoque** (quantidade atual, produtos em baixa).
-- **Produtos vendidos** (relatório detalhado de transações de venda).
-- **Faturamento total** (valores totais das vendas realizadas).
-- **Vendas por vendedor** (desempenho individual de cada funcionário).
-
+Relatórios gerenciais, como:
+- Produtos em estoque (incluindo itens com baixa quantidade).
+- Funcionários ativos e inativos.
+- Faturamento total por período e por vendedor.
 ---
 
 ## 5. Diagrama do Modelo Entidade-Relacionamento (MER)
